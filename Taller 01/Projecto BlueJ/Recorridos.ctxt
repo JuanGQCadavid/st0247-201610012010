@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Recorridos
+comment0.text=\r\n\ Clase\ que\ contiene\ los\ recorridos\ en\ profundidad\ (DFS)\ y\ anchura\ (BFS)\ para\r\n\ la\ clase\ Digraph\r\n\ \r\n\ @author\ Mateo\ Agudelo\r\n
+comment1.params=
+comment1.target=void\ testBFS()
+comment2.params=
+comment2.target=void\ testDFS()
+comment3.params=g\ start
+comment3.target=java.util.ArrayList\ dfs(Digraph,\ int)
+comment4.params=g\ nodo\ visitados\ list
+comment4.target=void\ dfs(Digraph,\ int,\ boolean[],\ java.util.ArrayList)
+comment5.params=g\ start
+comment5.target=java.util.ArrayList\ bfs(Digraph,\ int)
+comment6.params=g\ i\ j
+comment6.target=boolean\ hayCaminoDFS(Digraph,\ int,\ int)
+comment7.params=g\ i\ j
+comment7.target=boolean\ hayCaminoBFS(Digraph,\ int,\ int)
+numComments=8

@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Test
+comment0.text=\r\n\ Prueba\ las\ implementaciones\ de\ DigraphAL\ y\ DigraphAM\ con\ el\ grafo\ del\r\n\ documento.\r\n\ \r\n\ Ejecute\ esta\ clase\ luego\ de\ completar\ las\ clases\ DigraphAL\ y\ DigraphAM\ para\r\n\ tener\ una\ idea\ de\ si\ su\ implementacin\ est\uFFFD\ correcta.\r\n\ \r\n\ @author\ Mateo\ Agudelo\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment10.params=gList\ gMatrix
+comment10.target=boolean\ testHayCaminoBFS(DigraphAL,\ DigraphAM)
+comment11.params=b
+comment11.target=java.lang.String\ convert(boolean)
+comment2.params=
+comment2.target=java.util.HashSet\ fillEdges()
+comment3.params=g
+comment3.target=boolean\ fillGraph(Digraph)
+comment4.params=g
+comment4.target=boolean\ testWeight(Digraph)
+comment5.params=g
+comment5.target=boolean\ testSuccesors(Digraph)
+comment6.params=gList\ gMatrix
+comment6.target=boolean\ testDFS(DigraphAL,\ DigraphAM)
+comment7.params=gList\ gMatrix
+comment7.target=boolean\ testBFS(DigraphAL,\ DigraphAM)
+comment8.params=
+comment8.target=java.util.ArrayList\ fillCaminos()
+comment9.params=gList\ gMatrix
+comment9.target=boolean\ testHayCaminoDFS(DigraphAL,\ DigraphAM)
+numComments=12
