@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ test()
+comment1.params=start\ nums\ target
+comment1.target=boolean\ sumaGrupo(int,\ int[],\ int)
+comment2.params=s
+comment2.target=java.util.ArrayList\ combinations(java.lang.String)
+comment3.params=pre\ pos\ list
+comment3.target=void\ combinations(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment4.params=s
+comment4.target=java.util.ArrayList\ permutations(java.lang.String)
+comment5.params=pre\ pos\ list
+comment5.target=void\ permutations(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment6.params=tablero
+comment6.target=void\ imprimirTablero(int[])
+comment7.params=tablero
+comment7.target=boolean\ esValido(int[])
+comment8.params=n
+comment8.target=int\ queens(int)
+numComments=9
