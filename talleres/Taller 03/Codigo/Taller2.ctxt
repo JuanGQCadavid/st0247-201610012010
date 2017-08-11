@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Taller2
+comment0.text=\r\n\ Clase\ en\ la\ cual\ se\ implementan\ los\ metodos\ del\ Taller\ de\ Clase\ \#2\r\n\ \r\n\ @author\ Mauricio\ Toro,\ Mateo\ Agudelo\r\n
+comment1.params=
+comment1.target=void\ test()
+comment10.params=n
+comment10.target=int\ queens(int)
+comment2.params=start\ nums\ target
+comment2.target=boolean\ sumaGrupo(int,\ int[],\ int)
+comment3.params=s
+comment3.target=java.util.ArrayList\ combinations(java.lang.String)
+comment4.params=pre\ pos\ list
+comment4.target=void\ combinations(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment5.params=list\ element
+comment5.target=java.util.ArrayList\ adding(java.util.ArrayList,\ java.lang.String)
+comment6.params=s
+comment6.target=java.util.ArrayList\ permutations(java.lang.String)
+comment7.params=pre\ pos\ list
+comment7.target=void\ permutations(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment8.params=tablero
+comment8.target=void\ imprimirTablero(int[])
+comment9.params=tablero
+comment9.target=boolean\ esValido(int[])
+numComments=11
