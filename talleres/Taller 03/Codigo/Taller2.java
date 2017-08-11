@@ -7,21 +7,30 @@ import java.util.ArrayList;
  */
 public class Taller2 {
     
-        public static void test(){
-            ArrayList<String> result;
-            result = combinations("abc");
+    public static void test(){
+            
+            ArrayList<String> resultCombi;
+            resultCombi = combinations("abc");
+            System.out.println("Test Combinaciones ->");
+            for(String frase: resultCombi){
+                System.out.println(frase);
+            }
+            
+            
+            System.out.println("Test Suma de subconjuntos ->");
+            int data[] = {2,4,8};
+            System.out.println(sumaGrupo(0, data, 6));
+            
+           System.out.println("Test permutations ->");
+           ArrayList<String> result;
+            result = permutations("abc");
             
             for(String frase: result){
                 System.out.println(frase);
             }
+           
             
-            /*
-            int joder[] = {2,4,8};
-            System.out.println(sumaGrupo(0, joder, 6));
-            */
-            
-            
-        }
+    }
 
     public static boolean sumaGrupo(int start, int[] nums, int target) {
         
@@ -66,14 +75,21 @@ public class Taller2 {
         return list;
     }
     public static ArrayList<String> permutations(String s) {
-        // complete...
-        return null;
+        ArrayList<String> result = new ArrayList<String>();
+        
+        permutations("", s,result);
+        
+        return result;
     }
 
     // recomendacion
     private static void permutations(String pre, String pos, ArrayList<String> list) {
-        // complete...
+        if(pos.length() == 0){list.add(pre); return;};
+        for(int i = 0; i < pos.length();i++){
+            permutations(pre + pos.charAt(i) + "", pos.replace(pos.charAt(i)+ "", ""), list);
+        }
     }
+    
 
     public static void imprimirTablero(int[] tablero) {
         int n = tablero.length;
