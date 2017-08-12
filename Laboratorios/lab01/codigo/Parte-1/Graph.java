@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public abstract class Graph
 {
    protected int size;
+   
+   
    public  Graph(int vertices) 
    {
        size = vertices;

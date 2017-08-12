@@ -1,10 +1,14 @@
 #BlueJ class context
 comment0.params=size
 comment0.target=DigraphAM(int)
+comment0.text=\r\n\ @param\ int\ size\ ->\ Indica\ el\ tama\u00F1o\ de\ la\ Matriz\ de\ Adj.\r\n\ \r\n\ Este\ Constructor\ creara\ la\ Matriz\ de\ tama\u00F1o\ @param\ size\r\n
 comment1.params=source\ destination
 comment1.target=int\ getWeight(int,\ int)
+comment1.text=\r\n\ @param\ int\ source\ ->\ El\ indice\ del\ nodo\ base.\r\n\ @param\ int\ destination\ ->\ El\ indice\ del\ nodo\ conectado\ con\ el\ base.\r\n\ \r\n\ Calcula\ el\ tama\u00F1o\ del\ arco\ que\ hay\ entre\ \r\n\ el\ nodo\ source\ y\ el\ nodo\ destination.\r\n\ \r\n\ @return\ int\ tama\u00F1o\ del\ arco\ de\ conexion\ entre\ ambos\ nodos.\r\n
 comment2.params=source\ destination\ weight
 comment2.target=void\ addArc(int,\ int,\ int)
+comment2.text=\r\n\ @param\ int\ source\ ->\ indice\ del\ nodo\ base.\r\n\ @param\ int\ destination\ ->\ indice\ del\ nodo\ a\ conectar\ con\ el\ nodo\ base.\r\n\ @param\ int\ weigth\ ->\ valor\ de\ la\ longitud\ del\ arco\ entre\ ambos\ nodos.\r\n\ \r\n\ addArc\ Hace\ la\ coneccion\ entre\ el\ nodo\ source\ y\r\n\ el\ nodo\ destination,\ a\u00F1adiendole\ a\ ese\ arco\ el\ valor\r\n\ de\ weight.\r\n
 comment3.params=vertex
 comment3.target=java.util.ArrayList\ getSuccessors(int)
+comment3.text=\r\n\ @param\ int\ vertex\ ->\ El\ indice\ del\ nodo\ base.\r\n\ \r\n\ getSuccessors\ obtiene\ todo\ los\ indices\ de\ los\ nodos\r\n\ sucesores\ que\ tiene\ el\ nodo\ base,\ los\ introduce\ en\r\n\ un\ array\ list.\r\n\ \r\n\ @return\ ArrayList<Integer>\ de\ todos\ los\ indices\ de\ nodos\ sucesores.\r\n
 numComments=4
