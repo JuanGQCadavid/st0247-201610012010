@@ -67,7 +67,7 @@ public class DigraphAM extends Graph
        //Obtendremos todos los indicadores vertices 
        for(int index = 0; index < graphAM.length; ++index){
            //Si el valor del arco es 0 entonces no hay conexion.
-           if(graphAM[index][0] > 0)successors.add(index);
+           if(graphAM[vertex][index] > 0)successors.add(index);
        } 
        
        return successors;

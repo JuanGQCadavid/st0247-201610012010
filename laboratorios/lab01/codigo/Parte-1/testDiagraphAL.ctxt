@@ -6,4 +6,6 @@ comment1.target=testDiagraphAL()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ testDiagraphAL\r\n
 comment2.params=
 comment2.target=void\ testWeigth()
-numComments=3
+comment3.params=
+comment3.target=void\ testMaxSuccessors()
+numComments=4

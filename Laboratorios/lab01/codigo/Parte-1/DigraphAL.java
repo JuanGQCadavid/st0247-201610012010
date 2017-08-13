@@ -67,7 +67,7 @@ public class DigraphAL extends Graph
       for(Pareja parejaActual: arregloParejas){
           if(parejaActual.getVertice() == destination) return parejaActual.getPeso();
       }
-      return -1;
+      return 0;
    }
 
   

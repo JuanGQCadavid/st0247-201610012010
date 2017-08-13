@@ -8,6 +8,9 @@
 public class Jodiendo
 {
     
+    public static void main(){
+    
+    }
     public static int sampleMethod(int y)
     {
         // put your code here
