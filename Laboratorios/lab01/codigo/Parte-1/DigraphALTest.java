@@ -40,7 +40,43 @@ public class DigraphALTest
     public void tearDown()
     {
     }
+    
+    @Test
+    public void testWeigth(){
+        DigraphAL dgal = new DigraphAL(5);
+         dgal.addArc(0,1,10);
+         dgal.addArc(0,2,3);
+         dgal.addArc(1,2,1);
+         dgal.addArc(1,3,2);
+         dgal.addArc(2,1,4);
+         dgal.addArc(2,3,8);
+         dgal.addArc(2,4,2);
+         dgal.addArc(3,4,7);
+         dgal.addArc(4,3,9);
+        
+        
+        assertEquals(dgal.getWeight(0,1),10);
+        //System.out.println(dgal.getWeight(0,1) + " = " + 10);
+        assertEquals(dgal.getWeight(0,2),3);
+        //System.out.println(dgal.getWeight(0,2) + " = " + 3);
+        assertEquals(dgal.getWeight(1,2),1);
+        //System.out.println(dgal.getWeight(1,2) + " = " + 1);
+        assertEquals(dgal.getWeight(1,3),2);
+        //System.out.println(dgal.getWeight(1,3) + " = " + 2);
+        assertEquals(dgal.getWeight(2,1),4);
+        //System.out.println(dgal.getWeight(2,1) + " = " + 4);
+        assertEquals(dgal.getWeight(2,3),8);
+        //System.out.println(dgal.getWeight(2,3) + " = " + 8);
+        assertEquals(dgal.getWeight(2,4),2);
+        //System.out.println(dgal.getWeight(2,4) + " = " + 2);
+        assertEquals(dgal.getWeight(3,4),7);
+        //System.out.println(dgal.getWeight(3,4) + " = " + 7);
+        assertEquals(dgal.getWeight(4,3),9);
+        //System.out.println(dgal.getWeight(4,3) + " = " + 9);
 
+        
+    }
+    
     @Test
     public void From0To3()
     {

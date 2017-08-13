@@ -1,4 +1,19 @@
 #BlueJ class context
-comment0.params=v\ p
-comment0.target=Pareja(int,\ int)
-numComments=1
+comment0.target=Pareja
+comment0.text=\r\n\ Clase\ Pareja\ para\ poder\ hacer\ una\ lista\ que\ tenga\ dos\ valores\ en\ sus\ nodos\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=v\ p
+comment1.target=Pareja(int,\ int)
+comment1.text=\r\n\ @param\ int\ v\ ->\ nodo\ Vertice.\r\n\ @param\ int\ p\ ->\ peso\ para\ llegar\ al\ nodo\ vertice.\r\n\ \r\n\ constructor\ por\ defecto.\r\n\ \r\n
+comment2.params=
+comment2.target=int\ getVertice()
+comment2.text=\r\n\ Retorna\ el\ vertice\r\n\ \r\n\ @return\ int\ vertice;\r\n
+comment3.params=
+comment3.target=int\ getPeso()
+comment3.text=\r\n\ Retorna\ el\ peso\r\n\ \r\n\ @return\ int\ peso;\r\n
+comment4.params=vertice
+comment4.target=void\ setVertice(int)
+comment4.text=\r\n\ @param\ int\ vertice\ ->\ Nodo\ vertice.\r\n\ \r\n\ establece\ el\ valor\ al\ nodo\ Vertice.\r\n
+comment5.params=peso
+comment5.target=void\ setPeso(int)
+comment5.text=\r\n\ @param\ int\ vertice\ ->\ valor\ del\ Peso\ al\ nodo\ vertice.\r\n\ \r\n\ establece\ el\ valor\ a\ peso.\r\n
+numComments=6

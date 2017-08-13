@@ -1,10 +1,14 @@
 #BlueJ class context
-comment0.params=size
-comment0.target=DigraphAL(int)
-comment1.params=source\ destination\ weight
-comment1.target=void\ addArc(int,\ int,\ int)
-comment2.params=source\ destination
-comment2.target=int\ getWeight(int,\ int)
-comment3.params=vertice
-comment3.target=java.util.ArrayList\ getSuccessors(int)
-numComments=4
+comment0.target=DigraphAL
+comment0.text=\r\n\ Esta\ clase\ es\ una\ implementaci\u00F3n\ de\ un\ digrafo\ usando\ listas\ de\ adyacencia\r\n\ \r\n\ @author\ Juan\ Gonzalo\ Quiroz\ Cadavid,\ Mauricio\ Toro\ \r\n\ @version\ 1\r\n
+comment1.params=size
+comment1.target=DigraphAL(int)
+comment1.text=\r\n\ @param\ size\ ->\ La\ cantidad\ de\ nodos\ del\ grafo.\r\n\ Almacena\ los\ nodos\ desde\ 0\ a\ size-1.\r\n\ \r\n\ Nota\:\ Este\ paso\ es\ importante\ para\ no\ tener\r\n\ errores\ mas\ adelante\ al\ apuntar\ a\ un\ espacio\r\n\ no\ declarado.\r\n\ \r\n
+comment2.params=source\ destination\ weight
+comment2.target=void\ addArc(int,\ int,\ int)
+comment2.text=\r\n\ @param\ source\ ->\ indice\ Nodo\ base.\r\n\ @param\ destination\ ->\ indice\ Nodo\ a\ conectar\ con\ nodo\ base.\r\n\ @param\ weigth\ ->\ valor\ de\ la\ longitud\ del\ arco.\r\n\ \r\n\ Se\ generara\ un\ vinculo\ de\ Nodo\ base\ a\ Nodo\ destino.\r\n\ \r\n
+comment3.params=source\ destination
+comment3.target=int\ getWeight(int,\ int)
+comment4.params=vertice
+comment4.target=java.util.ArrayList\ getSuccessors(int)
+numComments=5
