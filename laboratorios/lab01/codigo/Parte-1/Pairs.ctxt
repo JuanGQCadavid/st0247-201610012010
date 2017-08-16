@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Pairs
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pairs\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nodoBase\ hashNodes
+comment1.target=Pairs(Nodo,\ java.util.ArrayList)
+comment2.params=nodoBase
+comment2.target=Pairs(Nodo)
+comment3.params=
+comment3.target=Nodo\ getNodoBase()
+comment4.params=nodoBase
+comment4.target=void\ setNodoBase(Nodo)
+comment5.params=
+comment5.target=java.util.ArrayList\ getHashNodes()
+comment6.params=hashNodes
+comment6.target=void\ setHashNodes(java.util.ArrayList)
+numComments=7

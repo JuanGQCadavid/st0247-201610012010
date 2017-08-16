@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=MedellinMapa
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MedellinMapa\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=archivo
+comment1.target=void\ armarGrafo(java.lang.String)
+comment2.params=ficheroLectura
+comment2.target=void\ leerNodosIniciales(java.io.BufferedReader)
+comment2.text=\r\n\ Codigo\ basado\ en\:\r\n\ https\://geekytheory.com/como-leer-un-fichero-en-java\r\n\ \r\n
+comment3.params=ficheroLectura
+comment3.target=void\ leerArcosNodos(java.io.BufferedReader)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
