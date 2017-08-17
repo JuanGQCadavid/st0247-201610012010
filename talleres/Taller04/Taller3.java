@@ -1,0 +1,94 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+/**
+ * Clase en la cual se implementan los metodos del Taller de Clase #3
+ * 
+ * @author Mauricio Toro, Mateo Agudelo
+ */
+public class Taller3 {
+    /*
+     * 1.   Escriba un método para verificar si puede poner 
+     * una reina en determinada posición. Recuerde que debido 
+     * a la forma como representamos los tableros es imposible 
+     * tener dos reinas en una misma fila, por lo que no necesita
+     * verificar esta condición. El parámetro r hace referencia 
+     * a la fila, y el c a la columna.
+     */
+    
+    private static boolean puedoPonerReina(int r, int c, int[] tablero) {
+        /*
+         * Vamos a validar que
+         * 
+         * Horizontal = Si la pos de reians pasada sean diferentes
+         *  a la reina acutal
+         *      i != j
+         * 
+         * Vertical en ambos direcciones =  pos + i o pos -i 
+         */
+        
+        for(int pos = 0; pos < tablero.length-1; pos++){
+          if(tablero[pos] == r) return false;
+          
+          if(tablero[pos]+1 == r || tablero[pos]-1 == r ) return false;
+        }
+        
+        return true;
+    }
+    
+    public static void testeo(){
+
+    
+    }
+    
+    public static int nReinas(int n) {
+        int [] tablero = new int[n];
+        nReinas(0, 0, tablero);
+        
+       imprimirTablero(tablero);
+       
+       return 0;
+        
+    }
+    
+    private static int nReinas(int r, int c, int[] tablero) {
+        if(c == tablero.length) return 0;
+        if(puedoPonerReina(r,c,tablero)){
+            tablero[c] = r;
+        }else{
+            if(c == tablero.length-1){
+                return nReinas(tablero[c] =tablero[c] +1 , c = c -1,tablero);
+            }
+        }
+        
+        return  nReinas(r = r+1,c,tablero);
+        
+    }
+    
+    public static void imprimirTablero(int[] tablero) {
+        int n = tablero.length;
+        System.out.print("    ");
+        for (int i = 0; i < n; ++i)
+            System.out.print(i + " ");
+        System.out.println("\n");
+        for (int i = 0; i < n; ++i) {
+            System.out.print(i + "   ");
+            for (int j = 0; j < n; ++j)
+                System.out.print((tablero[i] == j ? "Q" : "#") + " ");
+            System.out.println();
+        }
+        System.out.println();
+    }
+    
+    public static ArrayList<Integer> camino(Digraph g, int inicio, int fin) {
+        return null;
+        // complete...
+    }
+
+    // recomendacion
+    private static boolean dfs(Digraph g, int nodo, int objetivo, boolean[] visitados, ArrayList<Integer> list) {
+        // complete...
+        return false;
+    }
+
+}
