@@ -40,78 +40,82 @@ public class RecorridosTest
     {
     }
     
-    public static void testBFS(){
-        Graph g = new DigraphAM(8);
+    @Test
+    public void testBFS(){
+        DigraphAL biGraphAL = new DigraphAL(5);
+         biGraphAL.addArc(0,1,10);
+         biGraphAL.addArc(0,2,3);
+         biGraphAL.addArc(1,2,1);
+         biGraphAL.addArc(1,3,2);
+         biGraphAL.addArc(2,1,4);
+         biGraphAL.addArc(2,3,8);
+         biGraphAL.addArc(2,4,2);
+         biGraphAL.addArc(3,4,7);
+         biGraphAL.addArc(4,3,9);
         
-        //g.addArc(int source, int destination, int weight);
+        ArrayList<Integer> resultAL = Recorridos.bfs(biGraphAL,0); 
         
-        g.addArc(0,4,0);
-             
-        g.addArc(1,6,0);
-        g.addArc(1,5,0);
+        DigraphAM biGraphAM = new DigraphAM(5);
+         biGraphAM.addArc(0,1,10);
+         biGraphAM.addArc(0,2,3);
+         biGraphAM.addArc(1,2,1);
+         biGraphAM.addArc(1,3,2);
+         biGraphAM.addArc(2,1,4);
+         biGraphAM.addArc(2,3,8);
+         biGraphAM.addArc(2,4,2);
+         biGraphAM.addArc(3,4,7);
+         biGraphAM.addArc(4,3,9);
         
-        g.addArc(2,4,0);
-        g.addArc(2,1,0);
-        g.addArc(2,5,0);
-        g.addArc(2,6,0);
+        ArrayList<Integer> resultAM = Recorridos.bfs(biGraphAM,0); 
         
-        g.addArc(3,1,0);
-        g.addArc(3,5,0);
+        assertEquals(resultAL.size(),resultAM.size());
         
-        g.addArc(4,2,0);
-        g.addArc(4,7,0);
-        
-        g.addArc(5,3,0);
-        
-        g.addArc(6,7,0);
-        g.addArc(6,5,0);
-        
-        g.addArc(7,6,0);
-        g.addArc(7,5,0);
-        
-        
-        ArrayList<Integer> result = Recorridos.bfs(g,0); 
-        
-        for(int number: result){
-            System.out.print(number + " ");
+        for(int number = 0; number < resultAM.size() ; number++){
+            String rAL= resultAL.get(number) +"";
+            String rAM = resultAM.get(number)+ "";
+            
+            assertEquals(rAL,rAM);
         }
-        
         
     }
     
-    public static void testDFS(){
-        Graph g = new DigraphAM(8);
+    @Test
+    public void testDFS(){
+        DigraphAM biGraphAM = new DigraphAM(5);
+         biGraphAM.addArc(0,1,10);
+         biGraphAM.addArc(0,2,3);
+         biGraphAM.addArc(1,2,1);
+         biGraphAM.addArc(1,3,2);
+         biGraphAM.addArc(2,1,4);
+         biGraphAM.addArc(2,3,8);
+         biGraphAM.addArc(2,4,2);
+         biGraphAM.addArc(3,4,7);
+         biGraphAM.addArc(4,3,9);
         
-        //g.addArc(int source, int destination, int weight);
         
-        g.addArc(0,3,0);
-        g.addArc(0,1,0);
-             
-        g.addArc(1,0,0);
-        g.addArc(1,2,0);
-        g.addArc(1,5,0);
+        ArrayList<Integer> resultAM = Recorridos.dfs(biGraphAM,3); 
         
-        g.addArc(2,1,0);
-        g.addArc(2,5,0);
-        g.addArc(2,4,0);
-        g.addArc(2,0,0);
-        
-        //g.addArc(3,1,0);
-        
-        g.addArc(4,7,0);
-        
-        //g.addArc(5,3,0);
-        
-        g.addArc(6,5,0);
-        
-        //g.addArc(7,6,0);
+        DigraphAL biGraphAL = new DigraphAL(5);
+         biGraphAL.addArc(0,1,10);
+         biGraphAL.addArc(0,2,3);
+         biGraphAL.addArc(1,2,1);
+         biGraphAL.addArc(1,3,2);
+         biGraphAL.addArc(2,1,4);
+         biGraphAL.addArc(2,3,8);
+         biGraphAL.addArc(2,4,2);
+         biGraphAL.addArc(3,4,7);
+         biGraphAL.addArc(4,3,9);
 
+        ArrayList<Integer> resultAL = Recorridos.dfs(biGraphAL,3); 
         
         
-        ArrayList<Integer> result = Recorridos.dfs(g,3); 
+        assertEquals(resultAL.size(),resultAM.size());
         
-        for(int number: result){
-            System.out.print(number + " ");
+        for(int number = 0; number < resultAM.size() ; number++){
+            String rAL= resultAL.get(number) +"";
+            String rAM = resultAM.get(number)+ "";
+            
+            assertEquals(rAL,rAM);
         }
         
         

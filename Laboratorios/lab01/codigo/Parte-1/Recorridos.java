@@ -9,36 +9,18 @@ import java.util.*;
 public class Recorridos {
     
     public static void testBFS(){
-        Graph g = new DigraphAM(8);
+        DigraphAL biGraphAL = new DigraphAL(5);
+         biGraphAL.addArc(0,1,10);
+         biGraphAL.addArc(0,2,3);
+         biGraphAL.addArc(1,2,1);
+         biGraphAL.addArc(1,3,2);
+         biGraphAL.addArc(2,1,4);
+         biGraphAL.addArc(2,3,8);
+         biGraphAL.addArc(2,4,2);
+         biGraphAL.addArc(3,4,7);
+         biGraphAL.addArc(4,3,9);
         
-        //g.addArc(int source, int destination, int weight);
-        
-        g.addArc(0,4,0);
-             
-        g.addArc(1,6,0);
-        g.addArc(1,5,0);
-        
-        g.addArc(2,4,0);
-        g.addArc(2,1,0);
-        g.addArc(2,5,0);
-        g.addArc(2,6,0);
-        
-        g.addArc(3,1,0);
-        g.addArc(3,5,0);
-        
-        g.addArc(4,2,0);
-        g.addArc(4,7,0);
-        
-        g.addArc(5,3,0);
-        
-        g.addArc(6,7,0);
-        g.addArc(6,5,0);
-        
-        g.addArc(7,6,0);
-        g.addArc(7,5,0);
-        
-        
-        ArrayList<Integer> result = bfs(g,0); 
+        ArrayList<Integer> result = bfs(biGraphAL,0); 
         
         for(int number: result){
             System.out.print(number + " ");
