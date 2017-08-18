@@ -26,11 +26,13 @@ public class Taller3 {
          * 
          * Vertical en ambos direcciones =  pos + i o pos -i 
          */
+        int revez = 0;
         
-        for(int pos = 0; pos < tablero.length-1; pos++){
-          if(tablero[pos] == r) return false;
+        for(int pos = c; pos >0; pos--){
+          revez++;
+          if( tablero[pos-1] + revez == r ||  tablero[pos-1] - revez == r ) return false;
           
-          if(tablero[pos]+1 == r || tablero[pos]-1 == r ) return false;
+          if(tablero[pos-1] == r) return false;
         }
         
         return true;
@@ -43,26 +45,38 @@ public class Taller3 {
     
     public static int nReinas(int n) {
         int [] tablero = new int[n];
+        
+        for(int i = 0; i < n; i++) tablero[i] = -1;
+        
         nReinas(0, 0, tablero);
         
-       imprimirTablero(tablero);
+        imprimirTablero(tablero);
        
-       return 0;
+        return 0;
         
     }
     
-    private static int nReinas(int r, int c, int[] tablero) {
-        if(c == tablero.length) return 0;
-        if(puedoPonerReina(r,c,tablero)){
-            tablero[c] = r;
-        }else{
-            if(c == tablero.length-1){
-                return nReinas(tablero[c] =tablero[c] +1 , c = c -1,tablero);
+    private static boolean nReinas(int r, int c, int[] tablero) {
+        if (r == tablero.length){
+            if(c == 0){
+                return false;
             }
+            tablero[c] = -1;
+            return  nReinas(tablero[c-1] + 1,c-1,tablero);
+            
         }
         
-        return  nReinas(r = r+1,c,tablero);
+        if(c == tablero.length) return true;
         
+        
+        if(puedoPonerReina(r,c,tablero)){
+            tablero[c] = r;
+            return  nReinas(0,c+1,tablero);
+        }else{
+
+            return nReinas(r+1, c ,tablero);
+
+        }        
     }
     
     public static void imprimirTablero(int[] tablero) {
