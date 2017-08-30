@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=g\ inicio\ fin
+comment1.target=java.util.ArrayList\ camino(Digraph,\ int,\ int)
+comment2.params=g\ nodo\ objetivo\ visitados\ list
+comment2.target=boolean\ dfs(Digraph,\ int,\ int,\ boolean[],\ java.util.ArrayList)
+numComments=3
