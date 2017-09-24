@@ -1,3 +1,5 @@
+ 
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -45,14 +47,17 @@ public class Taller3 {
     
     public static int nReinas(int n) {
         int [] tablero = new int[n];
+        int count = 0;
         
-        for(int i = 0; i < n; i++) tablero[i] = -1;
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++) tablero[j] = -1;
+            if (nReinas(i, 0, tablero)){imprimirTablero(tablero);count++;}
+        } 
         
-        nReinas(0, 0, tablero);
         
-        imprimirTablero(tablero);
+        //
        
-        return 0;
+        return count;
         
     }
     
@@ -95,14 +100,32 @@ public class Taller3 {
     }
     
     public static ArrayList<Integer> camino(Digraph g, int inicio, int fin) {
+        ArrayList<Integer> caminoDFS = new ArrayList<Integer>();
+        
+        if(dfs(g,inicio,fin,  new boolean[g.size()] , caminoDFS)){
+            return caminoDFS;
+        }
+       
         return null;
         // complete...
     }
 
     // recomendacion
     private static boolean dfs(Digraph g, int nodo, int objetivo, boolean[] visitados, ArrayList<Integer> list) {
-        // complete...
-        return false;
+        visitados[nodo] = true;
+        list.add(nodo);
+        
+        if(nodo == objetivo) return true;
+       
+        ArrayList<Integer> susesores = g.getSuccessors(nodo);
+        
+        for(int i = 0; i <= susesores.size(); i++ ){
+            if(visitados[i] = false){
+                dfs(g, susesores.get(i),objetivo, visitados,list);
+            }
+        }
+        
+        for()
     }
 
 }
