@@ -1,4 +1,5 @@
 
+import java.util.*;
 /**
  * Write a description of class N_Queens_BT here.
  * 
@@ -7,27 +8,63 @@
  */
 public class N_Queens_BT
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class N_Queens_BT
-     */
-    public N_Queens_BT()
-    {
-        // initialise instance variables
-        x = 0;
+    
+    public static void main(String[] args) {
+        
+        boolean[][] problemsOnTheRoad = leer();
+        
+        for(boolean[] row: problemsOnTheRoad){
+            System.out.println(Arrays.toString(row));
+        }
+        
+        
+    }
+    
+    public static boolean[][] leer(){
+        Scanner Leer = new Scanner(System.in);
+        int nQueens;
+        boolean[][] problemsOnTheRoad;
+        String line;
+        
+        nQueens = Leer.nextInt();
+        problemsOnTheRoad = new boolean [nQueens][nQueens];
+        
+        
+        for(int i = 0; i < nQueens; i++){
+            line = Leer.nextLine();
+            for(int j = 0; j < nQueens; j++){
+                if(line.charAt(j) == '*'){
+                    problemsOnTheRoad[i][j] = true;
+                }
+            }
+        }
+        
+        
+        
+        
+        return problemsOnTheRoad;
+    }
+    public static boolean validar(int[] arrayToCheck){
+        for (int i = 0; i < arrayToCheck.length ; i++) {
+            int count = 1;
+            for (int j = i +1; j < arrayToCheck.length ; j++) {
+                // Horizontales
+                if(arrayToCheck[j] == arrayToCheck[i]) return false;
+                //Diagonales
+                
+                //Arriba
+                if(arrayToCheck[i]-count == arrayToCheck[j]) return false;
+                
+                //Abajo
+                if(arrayToCheck[i]+count == arrayToCheck[j]) return false;
+                
+                count++;
+            }
+        }
+        return true;
+    
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
+   
 }
