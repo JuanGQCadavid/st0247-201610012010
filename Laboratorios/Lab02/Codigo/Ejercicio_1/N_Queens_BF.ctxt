@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=N_Queens_BF
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ N_Queens_BF\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=limit
+comment2.target=int\ count(int)
+comment3.params=arrayToCheck
+comment3.target=boolean\ validar(int[])
+comment4.params=limit
+comment4.target=inicializar(int)
+comment5.params=pos\ newArrayUP\ limit
+comment5.target=boolean\ up(int,\ int[],\ int)
+numComments=6
