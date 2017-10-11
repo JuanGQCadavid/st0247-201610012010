@@ -1,5 +1,4 @@
 import java.util.*;
-import Node;
 
 public class NodeContainer{
     private double idContainer;
@@ -11,7 +10,7 @@ public class NodeContainer{
     private int type;
     private Node nodeBase;
 
-    private Arraylist<Edge> successors;
+    private ArrayList<Edge> successors;
     private ArrayList<Edge> ancestors;
 
 
@@ -37,10 +36,10 @@ public class NodeContainer{
 
     }
 
-    public int getIdContainer(){
+    public double getIdContainer(){
 	return idContainer;
     }
-    public void setIdContanier(int idContainer){
+    public void setIdContanier(double idContainer){
 	this.idContainer = idContainer;
     }
 
@@ -58,17 +57,43 @@ public class NodeContainer{
 	this.nodeBase = nodeBase;
     }
 
-    public ArrayList<Node> getSuccessors(){
+
+    public ArrayList<NodeContainer> getSuccessorsContainer(){
+	ArrayList<NodeContainer> nodes = new
+	    ArrayList<NodeContainer>();
+
+	for(Edge edge: successors){
+	    nodes.add(edge.getEdgeNodeContainer());
+	}
+
+	return nodes;
+    }
+
+    
+    public ArrayList<Edge> getSuccessorsEdge(){
 	return successors;
     }
-    public void addSuccessor(Node newNode){
-	this.successor.add(newNode);
+    public void addSuccessor(Edge newNode){
+	successors.add(newNode);
     }
-    public ArrayList<Node> getAncestors(){
+
+
+    public ArrayList<NodeContainer> getAncestorsContainer(){
+	ArrayList<NodeContainer> nodes = new
+	    ArrayList<NodeContainer>();
+
+	for(Edge edge: ancestors){
+	    nodes.add(edge.getEdgeNodeContainer());
+	}
+
+	return nodes;
+    }
+    
+    public ArrayList<Edge> getAncestors(){
 	return ancestors;
     }
-    public void addAncestors(Node newNode){
-	this.ancestors.add(newNode);
+    public void addAncestors(Edge newNode){
+	ancestors.add(newNode);
     }
     
 

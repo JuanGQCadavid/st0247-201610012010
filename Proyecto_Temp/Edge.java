@@ -1,5 +1,3 @@
-import NodeContainer;
-
 
 public class Edge {
     private NodeContainer edgeNodeContainer;
@@ -10,17 +8,17 @@ public class Edge {
 		double edgeLength,
 		String edgeName){
 	this.edgeNodeContainer = edgeNodeContainer;
-	this edgeLength = edgeLength;
+	this.edgeLength = edgeLength;
 	this.edgeName = edgeName;
     }
 
     public void setNodeContainer(NodeContainer nodeContainer){
-	this.nodeContainer = nodeContainer;
+	this.edgeNodeContainer = nodeContainer;
     }
 
 
-    public NodeContainer getNodeContainer(){
-	return nodeContainer;
+    public NodeContainer getEdgeNodeContainer(){
+	return edgeNodeContainer;
     }
 
 
