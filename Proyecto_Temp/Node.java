@@ -1,4 +1,5 @@
-
+import java.util.*;
+import java.text.*;
 
 public class Node{
     private double idNode;
@@ -14,7 +15,16 @@ public class Node{
 	this.nombre = nombre;
 
     }
-
+    public String  getIdNodeString(){
+	/*
+	 * Code provide by https://stackoverflow.com/questions/16098046/how-to-print-double-value-without-scientific-notation-using-java
+	 */
+	
+	DecimalFormat df = new DecimalFormat("#");
+	df.setMaximumFractionDigits(0);
+	String result = df.format(idNode);
+	return result;
+    }
     public double getIdNode(){
 	return idNode;
     }
@@ -38,12 +48,13 @@ public class Node{
 	this.cordenadaX = cordenadaX;
     }
 
-    public String getNombre(){
+    public String getName(){
 	return nombre;
     }
-    public void setNombre(String nombre){
+    public void setName(String nombre){
 	this.nombre = nombre;
     }
+    
 
 
 

@@ -24,8 +24,8 @@ public class MedellinGraph{
     
     public void addContanierNode(NodeContainer newContainer){
 	containerNodes.add(newContainer);
-	Node baseNode = newContainer.getNodeBase();
-	organizePerName(newContainer,baseNode.getNombre());
+	Node baseNode = newContainer.getBaseNode();
+	organizePerName(newContainer,baseNode.getName());
 	//implemantar Tabla Hash.
     }
 
@@ -68,6 +68,20 @@ public class MedellinGraph{
 	hashNames.add(newPair);
 
 	
+    }
+
+    public void testConections(){
+	String result = "";
+	for(NodeContainer actualNode: containerNodes){
+	    Node baseNode = actualNode.getBaseNode();
+	    result += "ID -> " + baseNode.getIdNodeString() +
+			       "Y -> " + baseNode.getCordenadaY() +
+			       "X -> " + baseNode.getCordenadaX()
+		+ "/n";
+
+	    
+	}
+	System.out.println(result);
     }
 
 

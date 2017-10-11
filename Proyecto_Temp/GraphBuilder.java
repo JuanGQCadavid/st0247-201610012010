@@ -39,12 +39,15 @@ public class GraphBuilder{
 	double cordenadaX = Double.parseDouble(Test[2]);
 	String name = "NoName";
 	if(Test.length >= 4){
-	    name = Test[3];
+	    name = "";
+	    for(int i = 3; i < Test.length; i++)
+		name += Test[i] + " ";
 	}
 
 	medellinGraph.addNodeToContainerNode(idNode, cordenadaY,
 					     cordenadaX,name);
     }
+    
 
     public static void readFile(String fileDirection){
 
@@ -63,15 +66,15 @@ public class GraphBuilder{
 	     */
 	    boolean cambio = false;
             while((line = bufferedReader.readLine()) != null) {
-		if(line =="/n")
+		if(line.equals("[BREAK]"))
 		    cambio = true;
 
 		if(!cambio){
 		    buildNode(line);
 		}else{
-		    
+		   medellinGraph.testConections();
 		}
-                System.out.println(line);
+                //System.out.println(line);
             }   
 	    bufferedReader.close();
         }

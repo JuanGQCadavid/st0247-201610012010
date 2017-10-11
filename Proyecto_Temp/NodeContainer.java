@@ -52,10 +52,10 @@ public class NodeContainer{
 	this.type = type;
     }
 
-    public Node getNodeBase(){
+    public Node getBaseNode(){
 	return nodeBase;
     }
-    public void setNodeBase(Node nodeBase){
+    public void setBaseNode(Node nodeBase){
 	this.nodeBase = nodeBase;
     }
 
