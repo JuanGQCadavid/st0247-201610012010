@@ -7,6 +7,14 @@ public class MedellinGraph{
     private ArrayList<Pair> hashNames;
 
     private ArrayList<NodeContainer> containerNodes;
+
+    private int MAX_NODE = 60175732;
+
+
+    //Edges
+    private ArrayList<Edge> medellinEdgs;
+    private ArrayList<Pair> hashEdgeNames;
+    
     
     public MedellinGraph(){
 	containerNodes = new ArrayList<NodeContainer>();
@@ -35,8 +43,69 @@ public class MedellinGraph{
 				 double distance,
 				 String name){
 	
+	NodeContainer nodeContainerFrom = foundNodeContainer
+	    (idContainerFrom);
 	
-	return;
+	NodeContainer nodeContainerTo = foundNodeContainer
+	    (idContainerTo);
+	
+
+	if(nodeContainerTo == null || nodeContainerFrom == null){
+	    System.err.println("IMPOSSIBLE! ONE OF THEN DOESN'T EXIST");
+	    return;
+	}
+
+	
+	nodeContainerFrom.addSuccessor(new Edge(nodeContainerTo,
+						distance,
+						name));
+	nodeContainerTo.addAncestors(new Edge (nodeContainerFrom,
+					       distance,
+					       name));
+    }
+
+    public NodeContainer foundNodeContainer(double idNodeContainer){
+	NodeContainer nodeContainer =
+	    containerNodes.get(idContainer - MAX_NODE);
+
+	if(!nodeContainerFrom.getIdContainer() == idContainerFrom())
+	    nodeContainerFrom = lookForNodeContainer(idContainerFrom);
+
+	return nodeContainer;
+
+    }
+
+    public void addEdge(NodeContainer NodeC,double distance,
+			String name){
+	//??
+
+    }
+
+    //https://ideone.com/rnCxcP -> For Test Propouse.
+    public NodeContainer lookForNodeContainers (double idContainerLookFor){
+	
+	NodeContainer result;
+
+	int indexL = 0, indexR = containerNodes.size(),Operation = 0;
+	
+	
+	while(containerNodes.get(Operation).getIdContainer() !=
+	      idContainerLookFor){
+
+	    Operation = ((indexR-indexL)/2) + indexL;
+	    if(Operation <= 0)return null;
+	    
+	    if(idContainerLookFor <= containerNodes.get(Operation)){
+		indexR = Operation;
+	    }else{
+		indexL = Operation; 
+	    }
+	    
+	    
+	}
+
+	result = containerNodes.get(Operation);
+	return result;
     }
 
     public void addNodeToContainerNode(double idNode, double cordenadaY,

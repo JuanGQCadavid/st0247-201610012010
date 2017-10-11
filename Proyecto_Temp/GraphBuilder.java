@@ -47,6 +47,25 @@ public class GraphBuilder{
 	medellinGraph.addNodeToContainerNode(idNode, cordenadaY,
 					     cordenadaX,name);
     }
+        public static void connect2Contaniers(String line){
+	//Lets split the line.
+	String []Test = line.split(" ");
+
+	
+	double idContainerFrom = Double.parseDouble(Test[0]);
+	double idContainerTo = Double.parseDouble(Test[1]);
+	double length = Double.parseDouble(Test[2]);
+	String name = "UnKnown";
+	
+	if(Test.length > 4){
+	    name = "";
+	    for(int i = 3; i < Test.length; i++)
+		name += Test[i] + " ";
+	}
+
+	medellinGraph.connectContainer(idContainerFrom, idContainerTo,
+				       length,name);
+    }
     
 
     public static void readFile(String fileDirection){
@@ -66,17 +85,23 @@ public class GraphBuilder{
 	     */
 	    boolean cambio = false;
             while((line = bufferedReader.readLine()) != null) {
-		if(line.equals("[BREAK]"))
-		    cambio = true;
-
+		
 		if(!cambio){
+		    if(line.equals("[BREAK]")){
+			cambio = true;
+			continue;
+		    }
+		    
 		    buildNode(line);
 		}else{
-		   medellinGraph.testConections();
-		   break;
+		    
+		    connect2Contaniners(line);
+
 		}
                 //System.out.println(line);
-            }   
+            }
+	    
+	    // medellinGraph.testConections();
 	    bufferedReader.close();
         }
         catch(FileNotFoundException ex) {
