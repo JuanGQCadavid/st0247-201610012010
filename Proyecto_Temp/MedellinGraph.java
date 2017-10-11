@@ -72,16 +72,15 @@ public class MedellinGraph{
 
     public void testConections(){
 	String result = "";
+	int times = 100;
 	for(NodeContainer actualNode: containerNodes){
 	    Node baseNode = actualNode.getBaseNode();
-	    result += "ID -> " + baseNode.getIdNodeString() +
-			       "Y -> " + baseNode.getCordenadaY() +
-			       "X -> " + baseNode.getCordenadaX()
-		+ "/n";
+	    System.out.println( "ID -> " + baseNode.getIdNodeString() +
+			       " Y -> " + baseNode.getCordenadaY() +
+				" X -> " + baseNode.getCordenadaX());
 
-	    
 	}
-	System.out.println(result);
+	return;
     }
 
 

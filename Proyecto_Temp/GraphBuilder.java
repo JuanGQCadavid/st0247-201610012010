@@ -73,6 +73,7 @@ public class GraphBuilder{
 		    buildNode(line);
 		}else{
 		   medellinGraph.testConections();
+		   break;
 		}
                 //System.out.println(line);
             }   
