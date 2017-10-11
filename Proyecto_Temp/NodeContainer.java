@@ -21,8 +21,9 @@ public class NodeContainer{
 				 cordenadaX, nombre);
 	this.idContainer = idNode;
 	this.type = 0;
-	this.successors = null;
-	this.ancestors = null;
+
+	successors = new ArrayList<Edge>();
+	ancestors = new ArrayList<Edge>();
 
     }
 
@@ -31,8 +32,9 @@ public class NodeContainer{
 	this.nodeBase = nodeBase;
 	this.idContainer = nodeBase.getIdNode();
 	this.type = 0;
-	this.successors = null;
-	this.ancestors = null;
+
+	successors = new ArrayList<Edge>();
+	ancestors = new ArrayList<Edge>();
 
     }
 
