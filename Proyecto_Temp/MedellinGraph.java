@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.text.*;
 public class MedellinGraph{
     private NodeContainer nodeStart;
 
@@ -65,15 +65,25 @@ public class MedellinGraph{
     }
 
     public NodeContainer foundNodeContainer(double idNodeContainer){
-	NodeContainer nodeContainer =
-	    containerNodes.get(idContainer - MAX_NODE);
-
-	if(!nodeContainerFrom.getIdContainer() == idContainerFrom())
-	    nodeContainerFrom = lookForNodeContainer(idContainerFrom);
-
+	//https://stackoverflow.com/questions/9102318/cast-double-to-integer-in-java
+	
+	int result =(int) idNodeContainer - MAX_NODE;
+	NodeContainer nodeContainer;
+	
+	if(result < containerNodes.size()){
+	     nodeContainer = containerNodes.get(result);
+	    
+	    if(nodeContainer.getIdContainer() != idNodeContainer)
+		nodeContainer = lookForNodeContainer(idNodeContainer);
+	    
+	}else
+	    nodeContainer =
+		lookForNodeContainer(idNodeContainer);
+	
 	return nodeContainer;
 
     }
+
 
     public void addEdge(NodeContainer NodeC,double distance,
 			String name){
@@ -82,7 +92,7 @@ public class MedellinGraph{
     }
 
     //https://ideone.com/rnCxcP -> For Test Propouse.
-    public NodeContainer lookForNodeContainers (double idContainerLookFor){
+    public NodeContainer lookForNodeContainer (double idContainerLookFor){
 	
 	NodeContainer result;
 
@@ -95,7 +105,8 @@ public class MedellinGraph{
 	    Operation = ((indexR-indexL)/2) + indexL;
 	    if(Operation <= 0)return null;
 	    
-	    if(idContainerLookFor <= containerNodes.get(Operation)){
+	    if(idContainerLookFor <=
+	       containerNodes.get(Operation).getIdContainer()){
 		indexR = Operation;
 	    }else{
 		indexL = Operation; 
@@ -139,20 +150,12 @@ public class MedellinGraph{
 	
     }
 
-    public void testConections(){
-	String result = "";
-	int times = 100;
-	for(NodeContainer actualNode: containerNodes){
-	    Node baseNode = actualNode.getBaseNode();
-	    System.out.println( "ID -> " + baseNode.getIdNodeString() +
-			       " Y -> " + baseNode.getCordenadaY() +
-				" X -> " + baseNode.getCordenadaX());
-
-	}
-	return;
+    public ArrayList<NodeContainer> getContainerNodes(){
+	return containerNodes;
     }
 
-
+    
+    
     
 
 

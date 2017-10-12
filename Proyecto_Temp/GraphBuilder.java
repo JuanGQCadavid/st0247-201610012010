@@ -12,11 +12,13 @@ import java.io.*;
 public class GraphBuilder{
 
     private static MedellinGraph medellinGraph;
+    private static MedellinGraphTest medellinGraphTest;
     
     public static void main(String [ ] args){
 	//Creat Graph.
 
 	medellinGraph = new MedellinGraph();
+	medellinGraphTest = new MedellinGraphTest();
 
 	//Read the File.
 	if(args.length >= 1){
@@ -95,13 +97,13 @@ public class GraphBuilder{
 		    buildNode(line);
 		}else{
 		    
-		    connect2Contaniners(line);
+		    connect2Contaniers(line);
 
 		}
                 //System.out.println(line);
             }
-	    
-	    // medellinGraph.testConections();
+	    medellinGraphTest.setMedellinGraph(medellinGraph);
+	    medellinGraphTest.testConnections(1397149003);
 	    bufferedReader.close();
         }
         catch(FileNotFoundException ex) {
