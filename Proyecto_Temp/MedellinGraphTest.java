@@ -37,8 +37,7 @@ public class MedellinGraphTest{
 	    Node baseNode = actualNode.getBaseNode();
 	    System.out.println( "ID -> " + baseNode.getIdNodeString() +
 			       " Y -> " + baseNode.getCordenadaY() +
-				" X -
-> " + baseNode.getCordenadaX());
+				" X ->" + baseNode.getCordenadaX());
 
 	}
 
