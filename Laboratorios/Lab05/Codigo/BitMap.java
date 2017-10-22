@@ -26,7 +26,7 @@ public class BitMap{
 	for(int i = 0; i < binary.length; i ++)
 	    if(binary[i])
 		return i;
-
+	return 0;
     }
     public int getLength(boolean [] binary){
 	int count = 0;

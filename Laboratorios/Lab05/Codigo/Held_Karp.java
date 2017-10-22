@@ -5,59 +5,25 @@ public class Held_Karp {
     private BitMap bitMap;
     private Digraph diGraph;
     // Pair <Father, size>
-    private Pair<int,int> [][] hk;
+    private Pair<Integer,Integer> [][] hk;
     private int node_Vertex = 0;
-    
-    public Held_Karp(Digraph diGraph, int node_Vertex = 0){
+        
+    public Held_Karp(Digraph diGraph){
 	this.diGraph = diGraph;
-	bitMap = new bitMap();
-	this.node_Vertex = node_Vertex;
+	bitMap = new BitMap();
 	createMatrix();
 	held_Karp();
     }
 
     private void held_Karp(){
-	seLeTiene(0,[1,1,1]);
-    }
-    private Pair<int,int> seLeTiene(int index, boolean [] subGroup){
-	for(int i = index; i < subGroup.length; i++){
-	    subGroup[i] = false;
-	    
-	    if(hk[i][bitMap.getNumber(subGroup)] != null){
-		// Ya calculado previamente
-		return hk[i][bitMap.getNumber(subGroup)];
-		
-	    }else{
-		
-		if(subGroup.length() == 1){
-		    // node_Vertex -> index
-		    int distance = biGraph.getWeigth
-			(node_Vertex,index);
-
-		    hk[i][bitMap.getNumber(subGroup)] =
-			new Pair(index,distance);
-
-		    return hk[i][bitMap.getNumber(subGroup)];
-		    //Directo
-		}else{
-		    //No es directo y lo vamos a calcular.
-		    Pair father = seLeTiene(index +1, subGroup);
-		    int distance = biGraph.getWeigth
-			(father.first,index) + father.second;
-		    
-		    hk[i][bitMap.getNumber(subGroup)] =
-			new Pair(index,distance);
-
-		    return hk[i][bitMap.getNumber(subGroup)];
-		}
-		
-	    }
-	    subGroup[i] = true;
-	}
+	boolean [] subsSet = {true,true,true,true};
+	Pair<Integer,Integer> result = seLeTiene(0,subsSet);
+	System.out.println(result.second);
     }
     //                                    Index
     //El pair final a retornar es el de [0,{1,2,3}];
-    private Pair<int,int> seLeTiene(int index,boolean [] subGroup){
+    private Pair<Integer,Integer> seLeTiene(int index,boolean [] subGroup)
+    {
 
 
 	/*
@@ -80,7 +46,7 @@ public class Held_Karp {
 	 * ese.
 	 */
 
-	if(bitMap.getLength() == 0){
+	if(bitMap.getLength(subGroup) == 0){
 	    /* vean pues, salio con que es
 	     * de la forma [1,0], que maravilla
 	     * estamos en el fondo! jajajaj
@@ -101,8 +67,7 @@ public class Held_Karp {
 	    int distance = 0;
 	    //Veamos desde el nodo Vertice a este cuanto es
 
-	    distance += biGraph.getWeigth
-		(node_Vertex,index);
+	    distance += diGraph.getWeight(node_Vertex,index);
 
 	    /* 
 	     * Listo patron.
@@ -110,8 +75,8 @@ public class Held_Karp {
 	     * CUADREME ESO YA MISMO!.
 	     */
 
-	    Pair<int, int > newBaby =
-		new Pair<int,int>(node_Vertex, distance);
+	    Pair<Integer,Integer> newBaby =
+		new Pair<Integer,Integer>(node_Vertex, distance);
 
 	    hk[index][node_Vertex] = newBaby;
 	    return newBaby;
@@ -123,8 +88,8 @@ public class Held_Karp {
 	 * a descomponerlo.
 	 */
 	    
-	ArrayList<Pair<int,int>> results =
-	    new ArratList<Pair<int,int>>();
+	ArrayList<Pair<Integer,Integer>> results =
+	    new ArrayList<Pair<Integer,Integer>>();
 	
 	for(int i = 0; i < subGroup.length; i++){
 	    if(!subGroup[i]) continue;
@@ -148,18 +113,19 @@ public class Held_Karp {
 		 * Que no que?
 		 * Despejeme eso ya Mismmo.
 		 */
-		Pair <int,int> newPair = seLeTiene(newIndex,subGroup);
+		Pair <Integer,Integer> newPair =
+		    seLeTiene(newIndex,subGroup);
 		/*
 		 * Jefe, despejado..
 		 * Listo, consruyan el nuevo posible
 		 * Vertice, y guardelo como Opcion..
 		 * No se les olvide sumar Distancias..
 		 */
-		distance = diGraph.getWeigth
-		    (newIndex, index)+ newPair.second;
+		int distance = diGraph.getWeight(newIndex, index) +
+		    newPair.second;
 		
 		
-		results.add(new Pair<int,int> (newIndex, distance));
+		results.add(new Pair<Integer,Integer>(newIndex, distance));
 				
 	    }
 
@@ -178,13 +144,13 @@ public class Held_Karp {
 
     }
 
-    private Pair<int,int> getMinimun(ArrayList<Pair<int,int>> array){
+    private Pair<Integer,Integer> getMinimun(ArrayList<Pair<Integer,Integer>> array){
 	
 	int min = Integer.MAX_VALUE;
-	Pair<int,int> minPair;
+	Pair<Integer,Integer> minPair = null;;
 	int distance = 0;
 	
-	for(Pair<int,int> pairs : array){
+	for(Pair<Integer,Integer> pairs : array){
 
 	    distance = pairs.second;
 	    
@@ -200,22 +166,13 @@ public class Held_Karp {
 	
     }
 
-
-
-
-
-
-
-
-
-    
-    public int[][]  getHeld_Karp_Matrix(){
-	return hk_M;
+    public Pair<Integer,Integer> [][]  getHeld_Karp_Matrix(){
+	return hk;
     }
 
-    public int  getHeld_Karp_ValueDoingMatrix(){
+    public Pair<Integer,Integer>  getHeld_Karp_ValueDoingMatrix(){
 	held_Karp();
-	return jk_M[node_Vertex][jk_M.length];
+	return hk[node_Vertex][hk.length];
     }
 
     /*
@@ -234,9 +191,9 @@ public class Held_Karp {
     private void createMatrix(){
 	int m_Rows, m_Columns;
 
-	m_Rows = diGraph.getSize();
-	m_Columns = Math.pow(2,m_Rows -1 );
+	m_Rows = diGraph.size();
+	m_Columns =(int) Math.pow(2,m_Rows - 1 );
 	
-	hk_M = new int [m_Rows][m_Columns];
+	hk = new Pair<Integer,Integer> [m_Rows][m_Columns];
     } 
 }
