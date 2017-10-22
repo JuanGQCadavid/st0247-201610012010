@@ -1,27 +1,29 @@
 import java.util.*;
 import java.math.*;
 
-public class Held_Karp {
+public class Held_Karp_0_1{
     private BitMap bitMap;
     private Digraph diGraph;
     // Pair <Father, size>
-    private Pair<Integer,Integer> [][] hk;
     private int node_Vertex = 0;
-
+    private int [][] father;
+    private int [][] weight;
     
-
-    
-    public Held_Karp(Digraph diGraph){
+    public Held_Karp_0_1(Digraph diGraph){
 	this.diGraph = diGraph;
 	bitMap = new BitMap();
 	createMatrix();
-	held_Karp();
     }
 
-    private void held_Karp(){
-	boolean [] subsSet = {true,true,true,true};
-	Pair<Integer,Integer> result = seLeTiene(0,subsSet);
-	System.out.println(result.second);
+    public  int makeHeld_Karp(){
+	int size = diGraph.size() -1;
+	boolean subSet [] = new boolean[size];
+	
+	for(int i = 0; i < size; i++)
+	    subSet[i] = true;
+	
+	Pair<Integer,Integer> result = seLeTiene(node_Vertex,subSet);
+	return result.second;
     }
     //                                    Index
     //El pair final a retornar es el de [0,{1,2,3}];
@@ -33,12 +35,12 @@ public class Held_Karp {
 	 * Sera que este valor ya fue calculado
 	 * y estara esperando en la tabla?
 	 */
-	if(hk[index][bitMap.getNumber(subGroup)] != null){
+	if(getPair(index,bitMap.getNumber(subGroup)) != null){
 	    /*
 	     * Si seño! ya estaba calculado
 	     * Que hermosura no?,retorne  ese retoño
 	     */
-	    return (hk[index][bitMap.getNumber(subGroup)]);
+	    return getPair(index, bitMap.getNumber(subGroup));
 		
 	}
 
@@ -57,9 +59,9 @@ public class Held_Karp {
 
 	    //Estara  ya guardado?
 
-	    if(hk[index][node_Vertex] != null){
+	    if(getPair(index,node_Vertex) != null){
 		// mas hermoso no puede ser.
-		return hk[index][node_Vertex];
+		return getPair(index,node_Vertex);
 	    }
 	    /*
 	     * Patron.. no esta calculado..
@@ -81,7 +83,7 @@ public class Held_Karp {
 	    Pair<Integer,Integer> newBaby =
 		new Pair<Integer,Integer>(node_Vertex, distance);
 
-	    hk[index][node_Vertex] = newBaby;
+	    setPair(index,node_Vertex,newBaby);
 	    return newBaby;
 		 
 	}
@@ -104,13 +106,14 @@ public class Held_Karp {
 	     * Y este hp que? ya estara o todavia nada?
 	     */
 
-	    if(hk[newIndex][bitMap.getNumber(subGroup)] != null)
+	    if(getPair(newIndex,bitMap.getNumber(subGroup)) != null)
 		/*
 		 * Eh que maravilla ome, ya esta calculado
 		 * agregemoslo para despues ver si es la
 		 * mejor Opcion
 		 */
-		results.add(hk[newIndex][bitMap.getNumber(subGroup)]);
+		results.add(getPair(newIndex,
+				    bitMap.getNumber(subGroup)));
 	    else{
 		/*
 		 * Que no que?
@@ -138,12 +141,13 @@ public class Held_Karp {
 
 
 	}
-	
+
+	//Hmmm Supspision
 	if(results.size() == 1)
 	    return results.get(0);
 	
-	hk[index][bitMap.getNumber(subGroup)] = getMinimun(results);
-	return hk[index][bitMap.getNumber(subGroup)];
+	setPair(index,bitMap.getNumber(subGroup),getMinimun(results));
+	return getPair(index,bitMap.getNumber(subGroup));
 
     }
 
@@ -168,16 +172,7 @@ public class Held_Karp {
 	
 	
     }
-
-    public Pair<Integer,Integer> [][]  getHeld_Karp_Matrix(){
-	return hk;
-    }
-
-    public Pair<Integer,Integer>  getHeld_Karp_ValueDoingMatrix(){
-	held_Karp();
-	return hk[node_Vertex][hk.length];
-    }
-
+    
     /*
      * This method create our 
      * matrix; wich one, we are
@@ -196,7 +191,26 @@ public class Held_Karp {
 
 	m_Rows = diGraph.size();
 	m_Columns =(int) Math.pow(2,m_Rows - 1 );
+
+	father = new int[m_Rows][m_Columns];
+	weight = new int[m_Rows][m_Columns];
 	
-	hk = new Pair<Integer,Integer> [m_Rows][m_Columns];
-    } 
+    }
+
+    private Pair<Integer, Integer> getPair(int row, int column ){
+	int fatherValue = father[row][column];
+	int weightValue = weight[row][column];
+
+	if(weightValue == 0)
+	    return null;
+	
+	return new Pair<Integer,Integer>(fatherValue, weightValue);
+
+    }
+
+    private void setPair(int row, int column, Pair<Integer,Integer> pair){
+	father[row][column] = pair.first;
+	weight[row][column] = pair.second;
+
+    }
 }
