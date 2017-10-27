@@ -1,0 +1,693 @@
+commit 81926614bb11e10630ce46603cf4b24265e36997
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Thu Oct 26 22:41:31 2017 -0500
+
+    Fin Lab 5
+
+commit 9d5e0580bb297e6571896555e4124592cc11c297
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Thu Oct 26 12:00:28 2017 -0500
+
+    Informe falta punto 3
+
+commit febc3960228bedd78b14db3b7eedbd3360f8541c
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 25 17:43:50 2017 -0500
+
+    Empezando informe
+
+commit d81ff27f4924d447dc0d9700ffdfb235566bea37
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Tue Oct 24 22:41:30 2017 -0500
+
+    Ejercico en linea Listo, codigo 1.2 corregido
+
+commit 31ec7b567ea0c3eb248a29befb99f047b7db8ef0
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 23:00:55 2017 -0500
+
+    1.4 Listo
+
+commit c004c1905691e8452b8a389fe6d9ac66d661d309
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 22:30:24 2017 -0500
+
+    Eliminando archivos despues de mover
+
+commit 93f44a99b53ff1fb3d99e4d107fdbab6751c415f
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 22:26:56 2017 -0500
+
+    1.3 Listo, re-estructurando git
+
+commit b234745e2f2b38a3c64831e0fb44fdcb8bfde0a5
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 22:15:05 2017 -0500
+
+    Punto 1.3 Funcionando
+
+commit 32885133d2158889eee077b4570fa0e5c785d5c3
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 18:40:01 2017 -0500
+
+    Starting 1.3
+
+commit 3d9d06e8cce39babb51a0f08c38378a6f5e60434
+Merge: 3d53be5 1f76632
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 14:45:59 2017 -0500
+
+    Merge branch 'master' of https://github.com/eafit-201610012010/st0247-201610012010
+
+commit 3d53be59871de86752f064e3d97a552b49228f1b
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 14:44:26 2017 -0500
+
+    1.2 ready
+
+commit 1f766321835a152a7d8f59eefbda5b1e7e00dcf5
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sun Oct 22 14:11:45 2017 -0500
+
+    verificador de ciclos
+    
+    ciclos para grafos
+
+commit 4869ea485a077ef7b85780fdc693905f252ca3e7
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 22 00:42:42 2017 -0500
+
+     Solo un maldito Bug
+
+commit cc0db8c428c52f173821755b7b72c1eca8335644
+Merge: 651008d 4c19993
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sat Oct 21 23:00:48 2017 -0500
+
+    Merge branch 'master' of https://github.com/eafit-201610012010/st0247-201610012010
+
+commit 651008d86e26c9ab4f2e9b2c38ac035f368b0a54
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sat Oct 21 22:58:55 2017 -0500
+
+    Held_Karp
+
+commit 4c19993d106d7e02677b4ca3d798c0422f47d868
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sat Oct 21 22:30:49 2017 -0500
+
+    son dos javadoc's este y el de cpp
+    
+    son dos javadoc's este y el de cpp
+
+commit 35a8c2f72b201a8f153b0f95d9ef34d076c2356a
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sat Oct 21 22:28:41 2017 -0500
+
+    grafos en java los otros codigos son cpp
+    
+    programando en todo de a poquito
+
+commit 19797e90b26757142692b1c11feb84cd139fc057
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sat Oct 21 22:26:40 2017 -0500
+
+    Add files via upload
+
+commit 49c66ea0c6f097469fae456d896b9e56876b4674
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sat Oct 21 22:24:59 2017 -0500
+
+    Add files via upload
+
+commit 5ca3be1ec469dc813c4c1cc835dea9de49b618eb
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Thu Oct 19 14:49:01 2017 -0500
+
+    FUCK.
+
+commit 4a439d321793e0c99bb25843cdccb2262373e4a2
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 18 17:11:57 2017 -0500
+
+    Punto 1.2 aprendiendo
+
+commit 067ee862eb6c6bddafdd58a73afe1775d2d70e68
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 18 08:45:54 2017 -0500
+
+    1.1 Funcionando Perfecto
+
+commit e6b188361bcd69f4fb510236866ba4fd3c560e09
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Tue Oct 17 20:14:55 2017 -0500
+
+    Levis
+
+commit 4e60c80d871e301c6c2f7bd0c70c2c527930f8b0
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Tue Oct 17 19:53:21 2017 -0500
+
+    Empezando Lab 05
+
+commit c02c435961413155d47bf8476d7c2112494d3f66
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 16:00:33 2017 -0500
+
+    Add files via upload
+
+commit f5eb30c90fa342acb16daf2fd618559be0e8eee5
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 15:58:09 2017 -0500
+
+    Documentacion Html
+    
+    Documentacion Html de los codigos
+
+commit a2fd3e8548342ab3a37ea5cf8d294c626aece9d3
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 01:52:38 2017 -0500
+
+    Informe final
+    
+    con actas de reuniones
+
+commit 061ead2199ac2497d5ee05ee593284b9071ff7ef
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 01:32:48 2017 -0500
+
+    PDF INFORME
+    
+    PDF INF
+
+commit ba2337790022f3ceb72c597e3a712694c9bff5d6
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 00:59:24 2017 -0500
+
+    N reinas BT
+    
+    n Reinas BT
+
+commit a2e9c23f778c110d7e30a5413a4cd323374c01a7
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Mon Oct 16 00:53:10 2017 -0500
+
+    informe
+
+commit 7c82604a55036613c9f3fc5b71f43d3cf4ced1ff
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sun Oct 15 23:08:04 2017 -0500
+
+    Informe Definitivo
+    
+    Definitivo
+
+commit 1f0dd866a03a832b823ee462295b285a7ee5cad3
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 15 23:00:32 2017 -0500
+
+    Creando carpetas
+
+commit 2bb909539392ed2722b9f94e887d812d4995c4fe
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 15 22:57:05 2017 -0500
+
+    Informe
+
+commit 87c89a27e18f0ee2e4d3e5e3ddd41165726dc9de
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 15 21:54:54 2017 -0500
+
+    Empezando informe
+
+commit 75283dbd2f37347bf472d2dd3f44635344e72d6a
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 15 16:55:21 2017 -0500
+
+    Codigo Lab 4 punto 1.1 , 1.2
+
+commit e1bba6cef43303f642ad613eb2e473df0caf4217
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sun Oct 15 13:46:38 2017 -0500
+
+    Ejercicio en Linea LAB 4
+
+commit 51177160e842e344be6af47cbbb4e9cd716743aa
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Fri Oct 13 14:36:29 2017 -0500
+
+    Lectura ready!
+
+commit eb5861da26d1126961c616d41e2b5cb77bf4a805
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Thu Oct 12 16:42:52 2017 -0500
+
+    Graph Buildgit status! Congratulations git status!
+
+commit dc97bccad53b7c7c2ef5d1f519cf082668c47271
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 11 15:35:24 2017 -0500
+
+    Empezando Edges
+
+commit 135b3d152768093090686d1be88be34a5df4858f
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 11 11:53:25 2017 -0500
+
+    Ups, 1 Bug
+
+commit f79ccba2990855cc63b745f48494599ff120fe86
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 11 11:41:03 2017 -0500
+
+    Building Nodes, all working
+
+commit dd25ef2454e20f5ae9404b223d42c3a047f55a78
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 11 10:43:35 2017 -0500
+
+    Creating Nodes -> Debugging
+
+commit 0743ce76966bc7cca65a5f3181a33e514233bb11
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Wed Oct 11 08:35:15 2017 -0500
+
+    Bugs Fixed
+
+commit 499532c4b9e2c49bd0de02b346a08631be4c82bf
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Tue Oct 10 19:52:54 2017 -0500
+
+    Project Architecture
+
+commit 60a0af145c6436a5876874fc414aef68b724314e
+Merge: c69b3a3 7771781
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Tue Oct 10 15:35:14 2017 -0500
+
+    Merge branch 'master' of https://github.com/eafit-201610012010/st0247-201610012010
+
+commit 7771781ce2721b48ecd50fe87967c373bf1922b5
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sun Oct 1 23:28:36 2017 -0500
+
+    :)
+    
+    :)
+
+commit c69b3a374185c5585d4690cc0f34f13548217812
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sat Sep 30 15:00:57 2017 -0500
+
+    N Queens sin revisar - Maldito linux
+
+commit 196d68871b45012f3846b87295b02786c80f7c09
+Merge: df61a6a 2247444
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Sep 30 13:18:17 2017 -0500
+
+    Merge pull request #1 from eafit-201610012010/Testing
+    
+    Yea Maracuua
+
+commit 2247444dd3b8680bdc46189b108d4186529e92a2
+Author: eafit-201610012010 <jquiro12@eafit.edu.co>
+Date:   Sat Sep 30 13:11:23 2017 -0500
+
+    Yea Maracuua
+
+commit df61a6a2820c5aa930bb1d84ab49cd21f612fa4d
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Fri Sep 29 15:52:34 2017 -0500
+
+    Lectura
+
+commit ebda4e77e0198aa6a0e2b12639a9732bfa769251
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Fri Sep 29 12:18:28 2017 -0500
+
+    Comienzo Ejercicio en Linea
+
+commit 33977f57a0c4cee9498e1f1079955d901a0f64c0
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Sep 28 23:56:21 2017 -0500
+
+    1.1 Listo - 1.2 Casi
+
+commit dbf865f0b0b759aaa06d33fab51a15370d52c697
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Sep 28 20:40:41 2017 -0500
+
+    Inicio LAB 2
+    
+    Creacion de carpetas
+
+commit 551b045ced0f675a60c0ef14506601babfc96e67
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Sep 26 22:09:32 2017 -0500
+
+    Eliminando BUG Carpeta Repetida
+
+commit 0b913a3df832a62ba217d3d0b44eff8d92b9f318
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Sep 26 22:08:59 2017 -0500
+
+    jkl
+
+commit 5f455bf83c89830d035d623df4eb4b6eb8db4796
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Sep 26 22:07:35 2017 -0500
+
+    Create xdasdasdasd.md
+
+commit b5c5afa224b6ee21841a566d14972710b4b5ce63
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Sep 26 22:04:39 2017 -0500
+
+    Create MADR.md
+
+commit a703363eea80de8e5bd86235f26210631d8671e6
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Sep 26 22:04:27 2017 -0500
+
+    Eliminando Archivo
+    
+    no servia
+
+commit e4abffd9cee10992fbef8e9318b0030a1e3d0810
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sun Sep 24 11:55:17 2017 -0500
+
+    taller 6 y cuadrar carpetas
+
+commit 9ba4e8200efa3405f7f1a90cb9c252fa23d49b8a
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sun Sep 24 09:58:55 2017 -0500
+
+    Commit
+
+commit 71eabe4fb8568b3896ffe1c6bc79cfc725c6dd71
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Sep 13 10:40:26 2017 -0500
+
+    Yeahh Maracuya!!
+
+commit 0e8b1401d4fb6f9f757b0f73c5d70777d535f78a
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Sep 13 10:36:46 2017 -0500
+
+    Create Second_Point.md
+
+commit 04156982efa5cc1fb74161a39ca2413c604dc1b7
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 31 12:04:48 2017 -0500
+
+    Add files via upload
+
+commit 3c0feaced675f8f82c27496dd8c6d01cfec3adac
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 30 18:55:20 2017 -0500
+
+    Taller 3 100%
+
+commit db0f46b92cee1b165200bc303d4d5d4812065d04
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sun Aug 20 22:06:11 2017 -0500
+
+    Add files via upload
+    
+    Entrega #1
+
+commit 68d4accddb5ae73d56e2e31dbfeb661b86420894
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sun Aug 20 19:45:05 2017 -0500
+
+    Create README.MD
+
+commit 36bfc9e18739e2efb326c3eac4f5720e3f683499
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Sun Aug 20 16:49:35 2017 -0500
+
+    Create Proyecto final
+    
+    Entrega 1
+
+commit 5f26a531bfd1168a3037c2333968812085b17a0c
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Thu Aug 17 22:21:15 2017 -0500
+
+    Add files via upload
+
+commit efba7d5fb0274379166d42055438b3b019b74d65
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Thu Aug 17 22:07:29 2017 -0500
+
+    Add files via upload
+
+commit 0c4103dbe820a5225e4ae40ac14685f8ecdfd964
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 17 21:38:31 2017 -0500
+
+    Organizando carpeta
+
+commit 1990031151cf04ef8e59fb4fd46a4a561ee79fc9
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 17 21:35:31 2017 -0500
+
+    nQueens
+
+commit 6754c4d82a5c3c7ce78173d52634d659e2a27c14
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 17 11:53:11 2017 -0500
+
+    Add files via upload
+
+commit ccdddfdd338031a8dd752510aa7db425026bf772
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 17 11:52:14 2017 -0500
+
+    Create readme.md
+
+commit 80dd6bd9a9680b9a8f9fc029139b6d254a9ba1d5
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:45:13 2017 -0500
+
+    Readme Otra vez .-.
+
+commit 9758197830fbe562ed26199b3b821c17f5d718a2
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:44:00 2017 -0500
+
+    Readme
+
+commit c6e41d83b013aad5d8e754d34b5fb23a4d40fbf2
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:39:39 2017 -0500
+
+    Correccion.
+
+commit 89569c44c5abc199f3fce400a057006079c62280
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:35:50 2017 -0500
+
+    Final
+
+commit fe5b9e014e61f03b77ee0799cbb757a4e50bc4f5
+Merge: ebbfa02 a55e165
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:34:47 2017 -0500
+
+    Merge branch 'master' of https://github.com/eafit-201610012010/st0247-201610012010
+
+commit ebbfa0208689638d888785c78ab353d7263237b3
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:33:09 2017 -0500
+
+    Arreglando Git
+
+commit a55e16544c28fc74f3d1a43159c4c8b737348ebb
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 22:31:38 2017 -0500
+
+    informe definitivo
+    
+    Informe definitivo.
+
+commit 18e59da133586eadc87b26bd9214241243a8eae0
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 22:31:10 2017 -0500
+
+    informe definitivo
+    
+    Informe Completo y definitivo.
+
+commit 4cec997853a6a8991c7bffb22044eb8497b6cc11
+Merge: 1948a28 2ba3d11
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:28:37 2017 -0500
+
+    Merge branch 'master' of https://github.com/eafit-201610012010/st0247-201610012010
+
+commit 1948a28c2fe8bd2aafddefb47689d7ed8c506612
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 22:28:34 2017 -0500
+
+    Final
+
+commit 2ba3d117ec4dc825ecc421d50718c5afe4085ab8
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 22:22:49 2017 -0500
+
+    informe final
+    
+    Informe final
+
+commit 8fe27bffa00f32475d4fd730dcac273fa1c5422f
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 22:07:58 2017 -0500
+
+    Add files via upload
+    
+    falta imagen del punto 3.1 que es elpunto 1.6 en breve subo la otra
+
+commit d35b95f2986cefbf971822a1bd20b25e134a4b9b
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 22:06:48 2017 -0500
+
+    Add files via upload
+    
+    A un falta imagen del 1.6 el punto 3.1
+
+commit 48179b706cee32d3d4e99fb870228cb033601c17
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 21:50:01 2017 -0500
+
+    punto 3
+    
+    Este es el mismo pero sin la plantilla del profesor.
+    Con la plantilla del profesor es el documento con el nombre  "ED1LabPlantilla.pdf"
+
+commit 42e3cf0eda305267e3cac026e50cba4a7c268cb5
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 21:49:31 2017 -0500
+
+    punto 3
+    
+    Este es el mismo pero sin la plantilla del profesor.
+    Con la plantilla del profesor es el documento con el nombre  "ED1LabPlantilla.pdf"
+
+commit 59d54fd13fe1cf5e1a4305de80c07498767324b1
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 21:47:54 2017 -0500
+
+    punto3
+    
+    punto 3
+
+commit 36c31ec26c45060a0ed4961c60934a82ed2b6dc6
+Author: adiazc50 <30503952+adiazc50@users.noreply.github.com>
+Date:   Wed Aug 16 21:46:15 2017 -0500
+
+    punto3
+    
+    Punto 3
+
+commit 173e73b0957f1e279e1cd7a80ddc862b89b0e9e9
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 15:38:07 2017 -0500
+
+    DFS Y BFS
+
+commit 91f2fe1d7bfff0a2144e619f25a56e4610ea18fa
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Wed Aug 16 15:37:05 2017 -0500
+
+    Medellin Graph
+
+commit a04892d764e549f26ed2cbecaca986e401e14f52
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Tue Aug 15 23:12:34 2017 -0500
+
+    Mapa Medellin
+    
+    Creacion e implementacion, em proceso.
+
+commit 67a63cc1bead0fb1058503a76677379fd84f291e
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 12 23:53:13 2017 -0500
+
+    Corregir Bugs, BiGraph
+    
+    Se corregieron errores en getSuccessorts de AM y se implementyo maxSuccessores en GraphAlgorithms.
+
+commit ce77cadc692f2e1f9657e11fa9f9814d9cec9be3
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 12 21:53:11 2017 -0500
+
+    Grafo Al reparado
+    
+    Problema con weigth.
+
+commit ee7b798460ad23660773f4e61fec5d770f136969
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 12 18:07:32 2017 -0500
+
+    Actualizacion README taller 2 y 3
+
+commit c92cad8bd1162742fd8402c1ed028072e0a6cd73
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 12 13:56:08 2017 -0500
+
+    Clase DiagraphAM
+
+commit daff8fe06a4b4cc71b4359066866884ab2b0fb88
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 12 12:27:00 2017 -0500
+
+    Inicio-Lab01
+
+commit 2fe982c4cd3e66ad11b0bf3eb95b42e4fcf13467
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 10 23:58:32 2017 -0500
+
+    End
+
+commit 4c5dbbd85f57199bf1fd121e89f9bd5bb450f51c
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 10 23:33:30 2017 -0500
+
+    Organizando Estructura - taller 03
+
+commit 4b8c3ec3d6168048adf8fc8033894dc2f9fd3028
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Thu Aug 10 12:14:42 2017 -0500
+
+    Empezando taller 3
+    
+    Sum lista.
+
+commit a0d605761a4faf7b0c895a38cbdec8da5fc04a28
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 5 23:54:30 2017 -0500
+
+    Copiando lo mismo al taller 02
+    
+    Por si el consecutivo del taller es 02 y no 01 jajajaja
+
+commit fdecf598ca7588c9952fd1f4192859cbc40dbc88
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Sat Aug 5 23:53:01 2017 -0500
+
+    Taller Terminado
+
+commit 634d5f6cc98059733d08b79f69872cc40144fa18
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Fri Aug 4 21:39:18 2017 -0500
+
+    Iniciando taller.
+
+commit 1b7dd4b362668e350aec661dca1ba565eb04c270
+Author: Juan Gonzalo Quiroz Cadavid <jquiro12@eafit.edu.co>
+Date:   Fri Aug 4 21:38:10 2017 -0500
+
+    Initial commit
