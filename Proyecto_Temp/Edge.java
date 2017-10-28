@@ -1,4 +1,3 @@
-
 public class Edge<ObjectContainer, ObjectName> {
     private ObjectContainer edgeNodeContainer;
     private double edgeLength;

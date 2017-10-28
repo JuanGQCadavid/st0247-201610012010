@@ -39,7 +39,7 @@ public class MedellinGraphTools {
 	    reduceMANANGER(actual_initial_node);
 	}
 
-	ArrayList<NodeContainer> validar =  validar();
+	//ArrayList<NodeContainer> validar =  validar();
 	/*
 
 	 * la unica forma que no este validado es que sea
@@ -124,7 +124,7 @@ public class MedellinGraphTools {
 		 */
 		NodeContainer my_new_soon_reduce =
 		    reduceSLAVE(the_mather_fucker,
-				the_mather_fuckers_directionn);
+				the_mather_fuckers_direction, me);
 		/*
 		 * So, i'm going to make the connections.
 		 */
@@ -196,11 +196,49 @@ public class MedellinGraphTools {
      *     * The ArrayList place
      * 
      */
-    public NodeContainer reduceSLAVE(NodeContainer initial_node){
+    public NodeContainer reduceSLAVE(NodeContainer the_mather_fucker,
+				     boolean the_mather_fuckers_direction,
+				     NodeContainer me){
+	//if(the_mather_fuckers_direction){// that means if it's double way
+
+	NodeContainer my_new_successor;
 	
-	//I'm gonna be solve son.
+	if(the_mather_fuckers_direction)//That means if it's doublle way
+	    my_new_successor = slave_Double(the_mather_fucker, me);
+	else
+	    my_new_successor = slave_One(the_mather_fucker,me);	
+
 	
-   }
+	
+    }
+    
+    public NodeContainer reduce_One(NodeContainer the_mather_fucker, NodeContainer me){
+
+	NodeContainer actual_Container = the_mather_fucker;
+	NodeContainer nodeTemp;
+	ArrayList<Edge<NodeContainer,String>> actual_Container_successors;
+        ArrayList<Edge<NodeContainer,String>> actual_Container_ancestor;
+	
+	while(true){
+	    
+	    actual_Container_successors =
+		the_mather_fucker.getSuccessorsEdge();
+	    actual_Container_ancestor =
+		the_mather_fucker.getAncestors();
+		
+	    if(actual_Container_successors.size() > 1)
+		return actual_Container;
+	    if(actual_Container_ancestor.size() > 1)
+		return actual_Container;
+	    
+	    actual_Container = actual_Container_successors.get(0);
+	    
+	    
+	    
+	}
+
+    }
+    
     public void setMedellinGraph(MedellinGraph medalloGraph){
 	this.medalloGraph = medalloGraph;
 	medalloContainer = medalloGraph.getContainerNodes();
