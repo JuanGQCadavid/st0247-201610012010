@@ -13,15 +13,23 @@ public class GraphBuilder{
 
     private static MedellinGraph medellinGraph;
     private static MedellinGraphTest medellinGraphTest;
+    private static MedellinGraphTools medellinTools;
     
+    private static boolean uDeBug = false;
+
     public static void main(String [ ] args){
 	//Creat Graph.
 
 	medellinGraph = new MedellinGraph();
 	medellinGraphTest = new MedellinGraphTest();
+	medellinTools = new MedellinGraphTools();
 
 	//Read the File.
 	if(args.length >= 1){
+	    if(args.length == 2)
+		if(args[1].equals("db"))
+		    uDeBug = true;
+	    
 	    readFile(args[0]);
 	}else{
 	    System.err.println("Ingrese el nombre del fichero!");
@@ -102,8 +110,13 @@ public class GraphBuilder{
 		}
                 //System.out.println(line);
             }
-	    medellinGraphTest.setMedellinGraph(medellinGraph);
-	    medellinGraphTest.testConnections(1397149003);
+	    if(uDeBug){
+		medellinGraphTest.setMedellinGraph(medellinGraph);
+		medellinGraphTest.testConnections(1397149003);
+		//		medellinGraphTest.testNodes();
+		medellinTools.setMedellinGraph(medellinGraph);
+		medellinTools.nodesDisconnected();
+	    }
 	    bufferedReader.close();
         }
         catch(FileNotFoundException ex) {

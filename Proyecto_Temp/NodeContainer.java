@@ -9,9 +9,11 @@ public class NodeContainer{
      */
     private int type;
     private Node nodeBase;
+    //Esta variable es solo por el metodo de Reducir
+    private boolean visited;
 
-    private ArrayList<Edge> successors;
-    private ArrayList<Edge> ancestors;
+    private ArrayList<Edge<NodeContainer,String>> successors;
+    private ArrayList<Edge<NodeContainer,String>> ancestors;
 
 
     public NodeContainer(double idNode, double cordenadaY,
@@ -22,8 +24,8 @@ public class NodeContainer{
 	this.idContainer = idNode;
 	this.type = 0;
 
-	successors = new ArrayList<Edge>();
-	ancestors = new ArrayList<Edge>();
+	successors = new ArrayList<Edge<NodeContainer,String>>();
+	ancestors = new ArrayList<Edge<NodeContainer,String>>();
 
     }
 
@@ -33,8 +35,8 @@ public class NodeContainer{
 	this.idContainer = nodeBase.getIdNode();
 	this.type = 0;
 
-	successors = new ArrayList<Edge>();
-	ancestors = new ArrayList<Edge>();
+	successors = new ArrayList<Edge<NodeContainer,String>>();
+	ancestors = new ArrayList<Edge<NodeContainer,String>>();
 
     }
 
@@ -64,7 +66,7 @@ public class NodeContainer{
 	ArrayList<NodeContainer> nodes = new
 	    ArrayList<NodeContainer>();
 
-	for(Edge edge: successors){
+	for(Edge<NodeContainer,String> edge: successors){
 	    nodes.add(edge.getEdgeNodeContainer());
 	}
 
@@ -72,10 +74,10 @@ public class NodeContainer{
     }
 
     
-    public ArrayList<Edge> getSuccessorsEdge(){
+    public ArrayList<Edge<NodeContainer,String>> getSuccessorsEdge(){
 	return successors;
     }
-    public void addSuccessor(Edge newNode){
+    public void addSuccessor(Edge<NodeContainer,String> newNode){
 	successors.add(newNode);
     }
 
@@ -84,17 +86,17 @@ public class NodeContainer{
 	ArrayList<NodeContainer> nodes = new
 	    ArrayList<NodeContainer>();
 
-	for(Edge edge: ancestors){
+	for(Edge<NodeContainer,String> edge: ancestors){
 	    nodes.add(edge.getEdgeNodeContainer());
 	}
 
 	return nodes;
     }
     
-    public ArrayList<Edge> getAncestors(){
+    public ArrayList<Edge<NodeContainer,String>> getAncestors(){
 	return ancestors;
     }
-    public void addAncestors(Edge newNode){
+    public void addAncestors(Edge<NodeContainer,String> newNode){
 	ancestors.add(newNode);
     }
     

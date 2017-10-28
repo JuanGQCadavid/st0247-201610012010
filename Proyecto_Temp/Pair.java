@@ -11,18 +11,18 @@ import java.util.*;
  */
 
 
-public class Pair{
-    private String nameKey;
-    private ArrayList<NodeContainer> nodesContainers;
+public class Pair<Key,Value>{
+    private Key key;
+    private Value value;
 
-    public Pair(String nameKey, ArrayList<NodeContainer> nodesContainers ){
+    public Pair(Key key, Value nodesContainers ){
 	this.nameKey = nameKey;
 	this.nodesContainers = nodesContainers;
     }
 
 
-    public Pair(String nameKey ){
-	this.nameKey = nameKey;
+    public Pair(Key key ){
+	this.key = key;
         nodesContainers = new ArrayList<NodeContainer>();
     }
 

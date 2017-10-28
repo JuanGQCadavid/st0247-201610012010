@@ -1,0 +1,8 @@
+--- Successors ---
+ID -> 287291921 Y -> 6.4198207 X ->-75.3922324
+--- Ancestors ---
+ID -> 287291920 Y -> 6.4198292 X ->-75.3919545
+Total nodes: 310153
+Anc Count:137
+Disc Count:0
+

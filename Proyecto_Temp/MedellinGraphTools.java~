@@ -1,0 +1,69 @@
+import java.util.*;
+
+public class MedellinGraphTools {
+
+    private MedellinGraph medalloGraph;
+    private ArrayList<NodeContainer>  medalloContainer;
+
+    public MedellinGraphTools(){}
+    
+    public MedellinGraphTools (MedellinGraph medalloGraph){
+	this.medalloGraph = medalloGraph;
+	medalloContainer = medalloGraph.getContainerNodes();
+    }
+
+    public void reduceMap(){
+	//for(NodeContainer node)
+	
+   }
+    public void setMedellinGraph(MedellinGraph medalloGraph){
+	this.medalloGraph = medalloGraph;
+	medalloContainer = medalloGraph.getContainerNodes();
+    }
+
+    public void  nodesDisconnected(){
+	int countA = 0,
+	    countD = 0;
+	String disconeccted = "",
+	    ancestors = "";
+	
+	for(NodeContainer nodeC : medalloContainer){
+	    
+	     if((nodeC.getAncestors()).size() == 0 &&
+		(nodeC.getSuccessorsEdge()).size() != 0){
+
+		 countA ++;
+		 ancestors  += "Without anc: " +
+		     (nodeC.getBaseNode()).getIdNodeString()
+		     + "\n";
+	     }
+	}
+    
+	    /* if((nodeC.getAncestors()).size() == 0 &&
+	       ( nodeC.getSuccessorsEdge()).size() == 0){
+
+		disconeccted += "Disconected: " +
+		    ( nodeC.getBaseNode()).getIdNodeString()
+		    + "\n";
+		countD++;
+	    }
+	    /*
+	       
+	    
+	}
+	    */
+    
+
+	System.out.println("Total nodes: " + medalloContainer.size());
+	System.out.println("Anc Count:" + countA + "\n" + ancestors);
+	
+	//System.out.println("Disc Count:" + countD  + "\n" + disconeccted);
+	
+	
+    }
+    public void checkIfAllIsConnected(){
+	
+
+    }
+
+}

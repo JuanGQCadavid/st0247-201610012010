@@ -1,23 +1,23 @@
 
-public class Edge {
-    private NodeContainer edgeNodeContainer;
+public class Edge<ObjectContainer, ObjectName> {
+    private ObjectContainer edgeNodeContainer;
     private double edgeLength;
-    private String edgeName;
+    private ObjectName edgeName;
 
-    public Edge(NodeContainer edgeNodeContainer,
+    public Edge(ObjectContainer edgeNodeContainer,
 		double edgeLength,
-		String edgeName){
+		ObjectName edgeName){
 	this.edgeNodeContainer = edgeNodeContainer;
 	this.edgeLength = edgeLength;
 	this.edgeName = edgeName;
     }
 
-    public void setNodeContainer(NodeContainer nodeContainer){
+    public void setNodeContainer(ObjectContainer nodeContainer){
 	this.edgeNodeContainer = nodeContainer;
     }
 
 
-    public NodeContainer getEdgeNodeContainer(){
+    public ObjectContainer getEdgeNodeContainer(){
 	return edgeNodeContainer;
     }
 
@@ -33,12 +33,12 @@ public class Edge {
     }
 
 
-    public void setEdgeName(String edgeName){
+    public void setEdgeName(ObjectName edgeName){
 	this.edgeName = edgeName;
     }
 
 
-    public String getEdgeName(){
+    public ObjectName getEdgeName(){
 	return edgeName;
     }
     

@@ -12,9 +12,12 @@ public class MedellinGraph{
 
 
     //Edges
-    private ArrayList<Edge> medellinEdgs;
+    private ArrayList<Edge<NodeContainer,String>> medellinEdgs;
     private ArrayList<Pair> hashEdgeNames;
-    
+
+    public ArrayList<Edge<NodeContainer,String>> getMedellinEdgs(){
+	return medellinEdgs;
+    }
     
     public MedellinGraph(){
 	containerNodes = new ArrayList<NodeContainer>();
@@ -56,10 +59,12 @@ public class MedellinGraph{
 	}
 
 	
-	nodeContainerFrom.addSuccessor(new Edge(nodeContainerTo,
+	nodeContainerFrom.addSuccessor(new Edge<NodeContainer,String>
+				       (nodeContainerTo,
 						distance,
 						name));
-	nodeContainerTo.addAncestors(new Edge (nodeContainerFrom,
+	nodeContainerTo.addAncestors(new Edge<NodeContainer,String>
+				     (nodeContainerFrom,
 					       distance,
 					       name));
     }
@@ -155,7 +160,8 @@ public class MedellinGraph{
     }
 
     
-    
+
+
     
 
 
