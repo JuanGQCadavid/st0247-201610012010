@@ -51,10 +51,13 @@ public class GraphBuilder{
 	for(int i = 0; i < size; i ++){
 	    for(int j = 0; j < size; j ++){
 		if(j == i ) continue;
-		digraph.addArc( i, j ,
-				medellinGraph.a_star
+		int value = medellinGraph.a_star
 				(nodesCont.get(i),
-				 nodesCont.get(j)) );
+				 nodesCont.get(j));
+		
+		System.out.println(" i: " + i + "  j: " + j);
+		System.out.println(value);
+		digraph.addArc( i, j ,value);
 	    }
 	}
 
@@ -76,24 +79,27 @@ public class GraphBuilder{
 	String [] tuple;
 	double xC,yC;
 	int intPos = 1;
-	result.add(null);result.add(null);
+	result.add(null);//result.add(null);
 	for(String pairC : pair_cordenadas){
 	    tuple = pairC.split(",");
 	    
-	    System.out.println("X : " + xC + "Y : " + yC);
 	    if(tuple[0].charAt(0) == '@'){
+		
 		xC = Double.parseDouble
-		    (tuple[0].subString(1,tuple[0].length()));
+		    (tuple[0].substring(1,tuple[0].length()));
 		yC = Double.parseDouble(tuple[1]);
 		System.out.println("@");
 		System.out.println("X : " + xC + "Y : " + yC);
-		result.add(0,medellinGraph.foundPerCordenadas(xC, yC));
+		result.set(0,medellinGraph.foundPerCordenadas(xC, yC));
 		return result;
 	    }
-
+	    //System.out.println("X : " + xC + "Y : " + yC);
+	    
 	    xC = Double.parseDouble(tuple[0]);
 	    yC = Double.parseDouble(tuple[1]);
-
+	    System.out.println("X : " + xC + "Y : " + yC);
+	    
+	    
 	    
 	    //FALTA
 	    result.add(intPos,medellinGraph.foundPerCordenadas(xC, yC));
@@ -179,6 +185,7 @@ public class GraphBuilder{
 		}
                 //System.out.println(line);
             }
+	    medellinGraph.clear();
 	    medellinGraphTest.setMedellinGraph(medellinGraph);
 	    medellinGraphTest.testConnections(1397149003);
 	    bufferedReader.close();

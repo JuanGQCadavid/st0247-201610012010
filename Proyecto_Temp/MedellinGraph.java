@@ -25,7 +25,19 @@ public class MedellinGraph{
 	nodeStart = null;
 	startHashMap();
     }
-
+    public void clear(){
+	for(ArrayList<NodeContainer> has: hashCordenadas){
+	    for(int perra = 0; perra < has.size(); perra ++){
+		NodeContainer node = has.get(perra);
+		
+		if( (node.getSuccessorsEdge()).size() == 0 &&
+		    (node.getAncestors()).size() == 0)
+		    has.remove(perra);
+	    }
+	
+	}
+	
+    }
     public MedellinGraph(NodeContainer nodeStart){
 	containerNodes = new ArrayList<NodeContainer>();
 	hashNames = new ArrayList<Pair>();
@@ -58,25 +70,32 @@ public class MedellinGraph{
     public int a_star(NodeContainer node_from, NodeContainer node_to){
 	ArrayList<PairH<NodeContainer,Integer>> next = new
 	    ArrayList<PairH<NodeContainer,Integer>>();
-
+	//System.out.println(node_to);
 	next.add(new PairH<NodeContainer,Integer>(node_from,0));
 
 	while(next.size() > 0){
 	    PairH<NodeContainer,Integer> actualPair = next.get(0);
-	    //OJOOOOOOOOOOOOOOO
-	    if(actualPair.first == node_to)
+	    //System.out.println("Hola");
+	    
+	    if(((actualPair.first).getBaseNode()).getIdNode()
+	       == ((node_to.getBaseNode()).getIdNode()))
 		return actualPair.second;
 
 	    for(NodeContainer nodes :
 		    node_from.getSuccessorsContainer()){
+		System.out.println("Node!");
 		next.add(new PairH<NodeContainer,Integer>
 			 (nodes,actualPair.second + 1));
 		
 	    }
-
+	    
+	    //System.out.println((actualPair.first).getBaseNode());
+	    
 	    next = ordernarArray(next, node_from, node_to);
+	    //System.out.println(next.size());
 	}
 
+	System.out.println("---------------");
 	return -1;
 
     }
@@ -85,7 +104,8 @@ public class MedellinGraph{
 	(ArrayList<PairH<NodeContainer, Integer>> next,
 	 NodeContainer node_from,
 	 NodeContainer node_to){
-
+	
+	//System.out.println(node_to);
 	double toX = (node_to.getBaseNode()).getCordenadaX();
 	double toY = (node_to.getBaseNode()).getCordenadaY();
 	double fromX = 0,
