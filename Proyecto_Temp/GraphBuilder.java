@@ -19,7 +19,7 @@ public class GraphBuilder{
 
 	medellinGraph = new MedellinGraph();
 	medellinGraphTest = new MedellinGraphTest();
-	Held_Karp_0_1 hel_kapr;
+	Held_Karp_0_1 held_kapr;
 	
 
 	
@@ -29,10 +29,15 @@ public class GraphBuilder{
 	    if(args.length == 2){
 
 		held_kapr =
-		    new Held_Karp_0_1(get_A(getNodesURL()));
+		    new Held_Karp_0_1(get_A(getNodesURL(args[1])));
 		
 	    }else{
-		System.err.println("Ingrese la URL");
+		Scanner sc = new Scanner(System.in);
+		String line = sc.readLine();
+
+		held_kapr =
+		    new Held_Karp_0_1(get_A(getNodesURL(line)));
+
 	    }
 	}else{
 	    System.err.println("Ingrese el nombre del fichero!");
@@ -40,50 +45,53 @@ public class GraphBuilder{
 
     }
 
-    public DigraphAM  get_A (ArrayList<NodeContainer> nodesCont){
+    public static DigraphAM  get_A (ArrayList<NodeContainer> nodesCont){
 	DigraphAM digraph = new DigraphAM(nodesCont.size());
 	int size = nodesCont.size();
 	for(int i = 0; i < size; i ++){
 	    for(int j = 0; j < size; j ++){
 		if(j == i ) continue;
-		
+		digraph.addArc( i, j ,
+				medellinGraph.a_star
+				(nodesCont.get(i),
+				 nodesCont.get(j)) );
 	    }
 	}
+
+	return digraph;
 	
     }
 
 
-    public static ArrayList<NodeContainer> [] getNodesURL(String URL){
+    public static ArrayList<NodeContainer> getNodesURL(String URL){
 	ArrayList<NodeContainer> result = new ArrayList<NodeContainer>();
 
 	String extra_data = "https://www.google.es/maps/dir/";
-	String first_state = URL.substring(extra_data, URL.length);
+	String first_state = URL.substring(extra_data.length(),
+					   URL.length());
 
 	System.out.println(first_state);
 
-	String [] pair_cordenadas = first_state.Split("/");
+	String [] pair_cordenadas = first_state.split("/");
 	String [] tuple;
 	int xC,yC, intPos = 1;
 	for(String pairC : pair_cordenadas){
-	     tuple = pairC.split[","];
-
-	     if(tuple[0].charAt(0) == '@')
-		 break;
-
-	     xC = Integer.parseInt(tuple[0]);
-	     yC = Integer.parseInt(tuple[1]);
-	     //FALTA
-	     result.add(intPos,medellinGraph.foundPerCordenadas(xC, yC));
-	     intPos++;
-	     
+	    tuple = pairC.split(",");
+	    xC = Integer.parseInt(tuple[0]);
+	    yC = Integer.parseInt(tuple[1]);
+	    
+	    if(tuple[0].charAt(0) == '@'){
+		result.add(0,medellinGraph.foundPerCordenadas(xC, yC));
+		return result;
+	    }
+	    
+	    
+	    //FALTA
+	    result.add(intPos,medellinGraph.foundPerCordenadas(xC, yC));
+	    intPos++;
+	    
 	}
-	tuple = pairC.split[","];
 	
-	xC = Integer.parseInt(tuple[0]);
-	yC = Integer.parseInt(tuple[1]);
-	
-	result.add(0,medellinGraph.foundPerCordenadas(xC, yC));
-
 	return result;
 	
 

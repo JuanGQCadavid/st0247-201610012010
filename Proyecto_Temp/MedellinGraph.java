@@ -1,5 +1,6 @@
 import java.util.*;
 import java.text.*;
+import java.lang.Math.*;
 public class MedellinGraph{
     private NodeContainer nodeStart;
 
@@ -42,11 +43,11 @@ public class MedellinGraph{
     }
 
     public void organizePerCordenadas(NodeContainer newNodeCont){
-	Node node_in_container = newContainer.getBaseNode();
+	Node node_in_container = newNodeCont.getBaseNode();
 
-	int cX = node_in_container.getCordenadaX();
-	int cY = node_in_container.getCordenadaY();
-	int head = int(cX);
+	double cX = node_in_container.getCordenadaX();
+	double cY = node_in_container.getCordenadaY();
+	int head = (int)(cX);
 	
 	int index =(int) ( (cX - head) * 100 );
 
@@ -54,23 +55,122 @@ public class MedellinGraph{
 	
     }
 
-    public NodeContainer foundPerCordenadas(int cX, int cY){
+    public int a_star(NodeContainer node_from, NodeContainer node_to){
+	ArrayList<PairH<NodeContainer,Integer>> next = new
+	    ArrayList<PairH<NodeContainer,Integer>>();
+
+	next.add(new PairH<NodeContainer,Integer>(node_from,0));
+
+	while(next.size() > 0){
+	    PairH<NodeContainer,Integer> actualPair = next.get(0);
+	    //OJOOOOOOOOOOOOOOO
+	    if(actualPair.first == node_to)
+		return actualPair.second;
+
+	    for(NodeContainer nodes :
+		    node_from.getSuccessorsContainer()){
+		next.add(new PairH<NodeContainer,Integer>
+			 (nodes,actualPair.second + 1));
+		
+	    }
+
+	    next = ordernarArray(next, node_from, node_to);
+	}
+
+	return -1;
+
+    }
+    //Pair of Node, Distance
+    public ArrayList<PairH<NodeContainer, Integer>> ordernarArray
+	(ArrayList<PairH<NodeContainer, Integer>> next,
+	 NodeContainer node_from,
+	 NodeContainer node_to){
+
+	double toX = (node_to.getBaseNode()).getCordenadaX();
+	double toY = (node_to.getBaseNode()).getCordenadaY();
+	double fromX = 0,
+	    fromY = 0;
+	int index = 1;
+       
+	double distanceHere;
+	
+	double distance  = Double.MAX_VALUE;
+
+        ArrayList<PairH<NodeContainer, Integer>> result = new
+	    ArrayList<PairH<NodeContainer, Integer>>();
+
+	double leng [] = new double[next.size()]; 
+	boolean visited [] = new boolean[next.size()];
+
+
+	//Le sacamos la distancia de cada nodo con respecto al
+	// nodo a buscar
+	
+	for(int p = 1; p < next.size(); p++){
+		
+	    fromX = (((next.get(p)).first).getBaseNode()).getCordenadaX();
+	    fromY = (((next.get(p)).first).getBaseNode()).getCordenadaY();
+
+	    distanceHere = Math.abs(toX - fromX)  +
+		Math.abs(toY - fromY);
+	    
+	    leng[p] = distanceHere;
+	    visited[p] = false;
+	}
+
+
+	//los ordenaremos de menor distancia a mayor
+	
+	for(int i = 1; i < next.size(); i++){
+	    for(int j = 1; j < next.size(); j++){
+		if(leng[j] < distance && !visited[j]){
+		    distance = leng[j];
+		    index = j;
+		}
+	    }
+	    visited[index] = true;
+	    result.add(next.get(index));
+	    distance = Double.MAX_VALUE;
+	}
+	// no se que pasa con el index
+	return result;
+	
+	// | Xo - X | + |Yo - Y|
+	
+    } 
+
+    public NodeContainer foundPerCordenadas(double cX, double cY){
 	//FALTA
        
 	int head = (int)(cX);
 	
 	int index =(int) ( (cX - head) * 100 );
 
-	ArrayList<NodeConatiner > possible
+	ArrayList<NodeContainer> possible
 	    = hashCordenadas.get(index);
+	double distance = Double.MAX_VALUE;
+	NodeContainer isThis = null;
 	
 	for(NodeContainer nodeAc : possible ){
-	    if ((newContainer.getBaseNode()).getCordenadaX()== cX &&
-		(newContainer.getBaseNode()).getCordenadaY() == cY)
-		return nodeAd;
-		
-	}
+	    double cXN = (nodeAc.getBaseNode()).getCordenadaX();
+	    double cYN = (nodeAc.getBaseNode()).getCordenadaY();
 	    
+	    if (cXN == cX && cYN == cY){
+		return nodeAc;
+
+	    }else{
+		double distanceHere = Math.abs(cX - cXN)  +
+		    Math.abs(cY - cYN);
+		if(distanceHere < distance){
+		    distance = distanceHere;
+		    isThis = nodeAc;
+		}
+		
+	    }
+	   
+	}
+	return isThis;
+	
 	
     }
     public void addContanierNode(NodeContainer newContainer){
@@ -81,15 +181,7 @@ public class MedellinGraph{
 	organizePerCordenadas(newContainer);
 	//implemantar Tabla Hash.
     }
-    public NodeContainer foundNodeContainer(int xC, int yC){
-	for(NodeContainer nodeActual :  containerNodes){
-	    Node nodeA = nodeActual.getBaseNode();
-	    if(nodeA.getCordenadaX() == xC &&
-	       nodeA.getCordenadaY() == yC)
-		return nodeActual;
-	}
-
-    }
+    
     
     public void connectContainer(double idContainerFrom,
 				 double idContainerTo,
