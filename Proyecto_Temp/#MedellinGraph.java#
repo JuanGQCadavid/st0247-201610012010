@@ -73,6 +73,12 @@ public class MedellinGraph{
 	    
 	
     }
+
+    public int a_star(NodeContainer nodeFrom, NodeContainer nodeTo){
+	while
+    }
+
+    
     public void addContanierNode(NodeContainer newContainer){
 	containerNodes.add(newContainer);
 	Node baseNode = newContainer.getBaseNode();

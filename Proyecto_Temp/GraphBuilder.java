@@ -19,16 +19,76 @@ public class GraphBuilder{
 
 	medellinGraph = new MedellinGraph();
 	medellinGraphTest = new MedellinGraphTest();
+	Held_Karp_0_1 hel_kapr;
+	
 
+	
 	//Read the File.
 	if(args.length >= 1){
 	    readFile(args[0]);
+	    if(args.length == 2){
+
+		held_kapr =
+		    new Held_Karp_0_1(get_A(getNodesURL()));
+		
+	    }else{
+		System.err.println("Ingrese la URL");
+	    }
 	}else{
 	    System.err.println("Ingrese el nombre del fichero!");
 	}
+
+    }
+
+    public DigraphAM  get_A (ArrayList<NodeContainer> nodesCont){
+	DigraphAM digraph = new DigraphAM(nodesCont.size());
+	int size = nodesCont.size();
+	for(int i = 0; i < size; i ++){
+	    for(int j = 0; j < size; j ++){
+		if(j == i ) continue;
+		
+	    }
+	}
+	
     }
 
 
+    public static ArrayList<NodeContainer> [] getNodesURL(String URL){
+	ArrayList<NodeContainer> result = new ArrayList<NodeContainer>();
+
+	String extra_data = "https://www.google.es/maps/dir/";
+	String first_state = URL.substring(extra_data, URL.length);
+
+	System.out.println(first_state);
+
+	String [] pair_cordenadas = first_state.Split("/");
+	String [] tuple;
+	int xC,yC, intPos = 1;
+	for(String pairC : pair_cordenadas){
+	     tuple = pairC.split[","];
+
+	     if(tuple[0].charAt(0) == '@')
+		 break;
+
+	     xC = Integer.parseInt(tuple[0]);
+	     yC = Integer.parseInt(tuple[1]);
+	     //FALTA
+	     result.add(intPos,medellinGraph.foundPerCordenadas(xC, yC));
+	     intPos++;
+	     
+	}
+	tuple = pairC.split[","];
+	
+	xC = Integer.parseInt(tuple[0]);
+	yC = Integer.parseInt(tuple[1]);
+	
+	result.add(0,medellinGraph.foundPerCordenadas(xC, yC));
+
+	return result;
+	
+
+    }
+    
 
     
     public static void buildNode(String line){
