@@ -33,8 +33,8 @@ public class GraphBuilder{
 		
 	    }else{
 		Scanner sc = new Scanner(System.in);
-		String line = sc.readLine();
-
+		String line = sc.nextLine();
+		//System.out.println(line);
 		held_kapr =
 		    new Held_Karp_0_1(get_A(getNodesURL(line)));
 
@@ -74,17 +74,26 @@ public class GraphBuilder{
 
 	String [] pair_cordenadas = first_state.split("/");
 	String [] tuple;
-	int xC,yC, intPos = 1;
+	double xC,yC;
+	int intPos = 1;
+	result.add(null);result.add(null);
 	for(String pairC : pair_cordenadas){
 	    tuple = pairC.split(",");
-	    xC = Integer.parseInt(tuple[0]);
-	    yC = Integer.parseInt(tuple[1]);
 	    
+	    System.out.println("X : " + xC + "Y : " + yC);
 	    if(tuple[0].charAt(0) == '@'){
+		xC = Double.parseDouble
+		    (tuple[0].subString(1,tuple[0].length()));
+		yC = Double.parseDouble(tuple[1]);
+		System.out.println("@");
+		System.out.println("X : " + xC + "Y : " + yC);
 		result.add(0,medellinGraph.foundPerCordenadas(xC, yC));
 		return result;
 	    }
-	    
+
+	    xC = Double.parseDouble(tuple[0]);
+	    yC = Double.parseDouble(tuple[1]);
+
 	    
 	    //FALTA
 	    result.add(intPos,medellinGraph.foundPerCordenadas(xC, yC));
@@ -105,8 +114,8 @@ public class GraphBuilder{
 
 	
 	double idNode = Double.parseDouble(Test[0]);
-	double cordenadaY = Double.parseDouble(Test[1]);
-	double cordenadaX = Double.parseDouble(Test[2]);
+	double cordenadaY = Double.parseDouble(Test[2]);
+	double cordenadaX = Double.parseDouble(Test[1]);
 	String name = "NoName";
 	if(Test.length >= 4){
 	    name = "";
